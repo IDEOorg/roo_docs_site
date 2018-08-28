@@ -1,0 +1,49 @@
+html {
+    line-height: $base-line-height;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    letter-spacing: $base-letter-spacing;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+}
+
+p {
+    margin: 0 0 ($spacing-unit * 0.6);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 $spacing-unit;
+}
+
+h4 {
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+body {
+    background: #efeff4;
+}
+
+.page-title {
+    color: #564e8d;
+    margin: 0 0 $spacing-unit;
+}
+
+.page-intro {
+    font-size: 18px;
+}
+
+.section-title {
+    color: $primary-color;
+    padding-top: 50px;
+    margin-top: 50px;
+    border-top: 1px #f1f1f1 solid;
+    text-transform: capitalize;
+}
+
+.caption {
+    padding-top: 10px;
+    font-style: italic;
+    font-size: 13px;
+    color: #676767;
+}

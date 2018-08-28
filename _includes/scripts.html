@@ -1,0 +1,61 @@
+<script type="text/javascript" src="{{relative}}vendor/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="{{relative}}vendor/materialize/js/materialize.min.js"></script>
+<script>
+    $(".button-collapse").sideNav();
+
+    var relative = null;
+    if (location.protocol === 'file:') {
+        relative = Array($('link[rel="canonical"]').attr('href').match(/\//g).length-2).join('../');
+        if (relative == '') relative = './';
+    }
+
+    function to_relative(link, index) {
+        if (!relative) return link;
+        var hash = link ? link.match(/#.*$/) : null;
+        if (hash) link = link.replace(/#.*$/, '');
+        return link?(link.replace(/^\//, relative)+(index?(link.substr(-1)=='/'?'index.html':''):'')+(hash?hash[0]:'')):null;
+    }
+
+    if (relative) {
+        $('a').attr('href', function(a,b){return to_relative(b, true);});
+        // $('img').attr('src', function(a,b){return to_relative(b, false);});
+    }
+
+    if(window.location.protocol !== "file:") {
+        var page = $("main");
+        var nav = $('.side-nav li');
+        var activeClass = 'active';
+
+        function loadPage(url) {
+            page.fadeOut(50, function(){
+                page.load(url + " main>*", loadComplete);
+            });
+
+            nav.removeClass(activeClass);
+            nav.find('a[href="'+window.location.pathname+'"]').parent().addClass(activeClass);        
+        }
+
+        function loadComplete(responseText) {
+            document.title = $(responseText).filter("title").text();
+            
+            window.scrollTo(0,0);
+            $('.side-nav').sideNav("hide");
+            $('.materialboxed').materialbox();
+            page.fadeIn(150);
+        }
+
+        nav.find('a').click(function(e){
+            e.preventDefault();
+            if(this.href && window.location.href != this.href) {
+                window.history.pushState({}, '', this.href);
+                loadPage(this.href);
+
+                return false;
+            }
+        });
+
+        window.addEventListener('popstate', function(e){
+            loadPage(window.location.href);
+        });
+    }
+</script>

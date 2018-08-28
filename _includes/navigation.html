@@ -1,0 +1,30 @@
+<ul class="collapsible" data-collapsible="accordion">
+  {% for link in include.context %}
+    {% assign active = nil %}
+    {% if page.url == link.url %}
+      {% assign active = 'active' %}
+    {% endif %}
+    {% if link.children %}
+      {% for child in link.children %}
+        {% if page.url == child.url %}
+          {% assign active = 'active' %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    
+    <li class="{{active}}">
+      {% if link.children %}
+        <a class="collapsible-header waves-effect {{active}}">{{ link.title }}</a>
+        <ul class="collapsible-body {{active}}">
+          {% for child in link.children %}
+            <li class="{% if page.url == child.url %}active{% endif %}" >
+                <a href="{{ child.url | prepend:site.baseurl }}">{{ child.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <a href="{{ link.url | prepend:site.baseurl }}" class="waves-effect">{{ link.title }}</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

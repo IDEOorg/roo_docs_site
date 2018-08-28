@@ -1,0 +1,93 @@
+.side-nav.fixed {
+  background: #fff;
+  overflow: hidden;
+  width: $side-nav-width;
+  height: 100%;
+
+  li {
+
+    a {
+      font-size: 13px;
+      font-weight: 700;
+      padding: 0 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .nav-menu {
+    overflow: auto;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+
+    a.collapsible-header {
+      padding: 0 30px;
+    }
+
+    .collapsible-body.active {
+      display: block;
+
+      // li.active {
+      //   background-color: $primary-color-light;
+      // }
+    }
+
+    .collapsible-body li a {
+      font-weight: 400;
+      padding: 0 37.5px 0 45px;
+    }
+  }
+
+  .logo {
+    margin-bottom: 80px;
+    padding: 30px 30px;
+    text-align: center;
+    border-bottom: 1px #f1f1f1 solid;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+
+  .logo-partnership {
+    background: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    img {
+      max-width: 100%
+    }
+  }
+}
+
+.top-nav {
+  background: #c2bdde;
+  box-shadow: none;
+  height: 100%;
+
+  .nav-title {
+    line-height: 56px;
+    font-size: 36px;
+    padding: 20px 0;
+    margin: 0;
+  }
+
+  .button-collapse {
+    margin-right: 15px;
+    padding: 20px 0;
+    height: 100%;
+  }
+
+  .menu-icon {
+    vertical-align: middle;
+  }
+}
+
+

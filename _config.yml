@@ -1,0 +1,31 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Tech Docs and Reference
+email: support@helloroo.zendesk.com
+description: Guidelines for technical implementation of Roo by IDEO.org
+url: "http://www.exampleproject.com" # If you are hosting online - the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Build settings
+markdown: kramdown
+kramdown:
+  auto_ids: true
+
+include: ['_pages']
+exclude: ['Gemfile', 'Gemfile.lock']
+
+# navigation:
+# - title: Overview
+#   url: /
+# - title: Grid System
+#   url: /grid-system/
+# - title: Typography
+#   url: /typography/
+# - title: Example Pages
+#   url: /examples/

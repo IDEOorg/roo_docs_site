@@ -1,0 +1,44 @@
+@media only screen and (min-width: 993px) {
+    .container {
+        width: $content-width;
+    }
+}
+
+header,main,footer {
+    margin-left: $side-nav-width;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        margin-left: 0;
+    }
+}
+
+.page {
+    padding: 60px 0;
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul, ol {
+        margin: 0 0 20px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        padding-bottom: 10px;
+    }
+
+    img, video {
+        border: 1px #ccc solid;
+    }
+
+    .no-border {
+        border: none;
+    }
+}
+
+.responsive-img {
+    width: 100%;
+}

@@ -1,0 +1,18 @@
+<header>
+  <nav class="top-nav">
+    <div class="container">
+      <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+        <img class="menu-icon" src="{{relative}}img/menu-icon.svg"/>
+      </a>
+      <h1 class="nav-title">{{site.title}}</h1>
+    </div>
+  </nav>
+</header>
+<div id="slide-out" class="side-nav fixed">
+  <div class="logo"><img src="{{relative}}img/roo_logo@3x.png"/></div>
+  <div class="nav-menu">
+  {% include navigation.html context=site.navigation %}
+  </div>
+  <div class="logo-partnership"><img src="{{relative}}img/IDEOorgLogo_WebColor.png"/></div>  
+</div>
+

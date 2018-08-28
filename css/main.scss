@@ -1,0 +1,39 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* Typography */
+$base-font-path:        "../vendor/materialize/fonts/roboto/";
+$material-icons-path:   "../vendor/materialize/fonts/material-design-icons/";
+$base-font-size:        14px;
+$base-font-weight:      400;
+$base-line-height:      1.8;
+$base-letter-spacing:   0.1px;
+
+$h1-fontsize:      2.8rem; //34px;
+$h2-fontsize:      2.0rem; //24px;
+$h3-fontsize:      1.5rem; //18px;
+$h4-fontsize:      1.1rem; //15px;
+$h5-fontsize:      1.0rem;
+$h6-fontsize:      0.8rem;
+
+/* Colors */
+$primary-color:    #537ab5;
+$text-color:       #505050;
+$caption-color:    #616161;
+$link-color:       #039be5;
+
+/* Layout */
+$content-width:       90%;
+$side-nav-width:      270px;
+$spacing-unit:        30px;
+$sidenav-item-height: 44px;
+$gutter-width:        3rem;
+
+@import
+    "materialize",
+    "base",
+    "layout",
+    "nav"
+;
