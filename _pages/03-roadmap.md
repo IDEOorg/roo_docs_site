@@ -1,7 +1,7 @@
 ---
-permalink: "/typography/"
+permalink: "/roadmap/"
 layout: page
-title: Typography
+title: Roadmap
 ---
 <style>
     .test-img {
