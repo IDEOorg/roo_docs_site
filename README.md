@@ -1,27 +1,8 @@
-# Design Documentation Template
+# Roo documentation site
 
 ## Overview
 
-This framework is intended to enable design teams to easily deliver digital design documentation. It promotes collaboration in the creation of content and provides a straightforward toolchain for building simple to moderately complex web-based project documentation.
-
-This project is an evolution of the original [IDEO guidelines website template](https://github.com/ideo/guidelines_website_template). This iteration was created for documenting Project Vice in Chicago in the summer of 2016. It was also utilized for it's sister project - Project Bender. 
-
-It is a hope that this framework will be expanded upon and used in future projects. If you have suggestions, problems or want to develop new functionality that would enhance this framework, please submit issues / pull requests.
-
-If you have any other questions please contact Derek Olson [dolson@ideo.com](mailto:dolson@ideo.com).
-
-## Features
-
-This framework has been designed to create a web-based deliverable that can be run locally. This is an ideal solution since the site can then be delivered like any other set of project files. You can also deploy / serve the content on any static host or webserver (Github Pages / Bitbucket Aerobatic / Amazon S3 / Apache / nginx etc.)
-
-* Supports confidentiality by running locally (can be hosted but not required)
-* Viewable by clients without specialized technology or IT department involvement
-* Supports embedding all content types including videos, animation, and interactive prototypes
-* Ability to be a "complete package" by linking to source files, presentations, etc.
-* Built-in **responsive grid system** to accomodate viewing on various devices / sizes
-* Easily modify basic style with Sass variables (or dig in deeper and modify theme to your liking)
-* Automatic generation of navigation including nested pages
-
+This site serves as the central repository for technical documentation of the Roo platform, built by IDEO.org in 2018. 
 
 ## How to build project
 
