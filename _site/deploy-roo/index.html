@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+  
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Deploy Roo</title>
+  <meta name="description" content="Summary and implementation guidelines for Roo, a financial coaching chatbot platform">
+  <link rel="icon" type="image/png" href="../img/roo_favicon.ico" sizes="32x32">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="canonical" href="http://www.exampleproject.com/deploy-roo/" />
+</head>
+
+
+  <body>
+
+    <header>
+  <nav class="top-nav">
+    <div class="container">
+      <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+        <img class="menu-icon" src="../img/menu-icon.svg"/>
+      </a>
+      <h1 class="nav-title">Docs and Reference</h1>
+    </div>
+  </nav>
+</header>
+<div id="slide-out" class="side-nav fixed">
+  <div class="logo"><img src="../img/roo_logo@3x.png"/></div>
+  <div class="nav-menu">
+  <ul class="collapsible" data-collapsible="accordion">
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/" class="waves-effect">Overview</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/diagrams_and_flows/" class="waves-effect">Diagrams & Flows</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a class="collapsible-header waves-effect ">Roadmap</a>
+        <ul class="collapsible-body ">
+          
+            <li class="" >
+                <a href="/roadmap/phase-one/">Phase One</a>
+            </li>
+          
+            <li class="" >
+                <a href="/roadmap/phase-two">Phase Two</a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="active">
+      
+        <a href="/deploy-roo/" class="waves-effect">Deploy Roo</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/technical-faq/" class="waves-effect">Tech FAQ</a>
+      
+    </li>
+  
+</ul>
+  </div>
+  <div class="logo-partnership"><img src="../img/IDEOorgLogo_WebColor.png"/></div>  
+</div>
+
+
+
+    <main>
+      <div class="container">
+        <article class="page">
+  <h1 class="page-title">Deploy Roo</h1>
+  
+  <div class="page-content">
+    
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script type="text/javascript" src="../vendor/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../vendor/materialize/js/materialize.min.js"></script>
+<script>
+    $(".button-collapse").sideNav();
+
+    var relative = null;
+    if (location.protocol === 'file:') {
+        relative = Array($('link[rel="canonical"]').attr('href').match(/\//g).length-2).join('../');
+        if (relative == '') relative = './';
+    }
+
+    function to_relative(link, index) {
+        if (!relative) return link;
+        var hash = link ? link.match(/#.*$/) : null;
+        if (hash) link = link.replace(/#.*$/, '');
+        return link?(link.replace(/^\//, relative)+(index?(link.substr(-1)=='/'?'index.html':''):'')+(hash?hash[0]:'')):null;
+    }
+
+    if (relative) {
+        $('a').attr('href', function(a,b){return to_relative(b, true);});
+        // $('img').attr('src', function(a,b){return to_relative(b, false);});
+    }
+
+    if(window.location.protocol !== "file:") {
+        var page = $("main");
+        var nav = $('.side-nav li');
+        var activeClass = 'active';
+
+        function loadPage(url) {
+            page.fadeOut(50, function(){
+                page.load(url + " main>*", loadComplete);
+            });
+
+            nav.removeClass(activeClass);
+            nav.find('a[href="'+window.location.pathname+'"]').parent().addClass(activeClass);        
+        }
+
+        function loadComplete(responseText) {
+            document.title = $(responseText).filter("title").text();
+            
+            window.scrollTo(0,0);
+            $('.side-nav').sideNav("hide");
+            $('.materialboxed').materialbox();
+            page.fadeIn(150);
+        }
+
+        nav.find('a').click(function(e){
+            e.preventDefault();
+            if(this.href && window.location.href != this.href) {
+                window.history.pushState({}, '', this.href);
+                loadPage(this.href);
+
+                return false;
+            }
+        });
+
+        window.addEventListener('popstate', function(e){
+            loadPage(window.location.href);
+        });
+    }
+</script>
+
+  </body>
+</html>
