@@ -63,7 +63,7 @@ title: Overview
   </div>
   <div class="col s12 l6">
     <div class="img-full">
-      <img src="{{page.root}}img/relationshipDiagram.png">
+      <img src="{{page.root}}img/relationshipdiagram.png">
     </div>
   </div>
 </div>
