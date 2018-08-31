@@ -2,7 +2,7 @@
 
 ## Overview
 
-This site serves as the central repository for technical documentation of the Roo platform, built by IDEO.org in 2018. 
+This site serves as the central repository for technical documentation of the Roo platform, built by IDEO.org in 2018. It is hosted using Github pages.
 
 ## How to build project
 
