@@ -9,8 +9,8 @@
 title: Docs and Reference
 email: support@helloroo.zendesk.com
 description: Summary and implementation guidelines for Roo, a financial coaching chatbot platform
-url: "" # If you are hosting online - the base hostname & protocol for your site
-baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://priceless-cori-d26a61.netlify.com/" # If you are hosting online - the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
 
 # Build settings
 markdown: kramdown
