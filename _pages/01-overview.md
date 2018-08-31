@@ -39,7 +39,7 @@ title: Overview
         <a href="https://github.com/IDEOorg/steps-bot" target="_blank">Chatbot Repo</a><span> (Github)</span>
       </li>
       <li>
-        <a href="" style="color: red" target="_blank">Coach App + Database Repo</a><span> (Github)</span>
+        <a href="https://github.com/IDEOorg/steps/" target="_blank">Coach App + Database Repo</a><span> (Github)</span>
       </li>
       <li>
         IDEO.org accounts credentials (restricted) are are in 1Password (including file called "env vars - Steps Dev...")
