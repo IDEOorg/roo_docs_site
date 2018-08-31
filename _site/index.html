@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+  
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Overview</title>
+  <meta name="description" content="Summary and implementation guidelines for Roo, a financial coaching chatbot platform">
+  <link rel="icon" type="image/png" href="img/roo_favicon.ico" sizes="32x32">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="canonical" href="https://ideoorg.github.io/roo_docs_site/" />
+</head>
+
+
+  <body>
+
+    <header>
+  <nav class="top-nav">
+    <div class="container">
+      <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+        <img class="menu-icon" src="img/menu-icon.svg"/>
+      </a>
+      <h1 class="nav-title">Docs and Reference</h1>
+    </div>
+  </nav>
+</header>
+<div id="slide-out" class="side-nav fixed">
+  <div class="logo"><img src="img/roo_logo@3x.png"/></div>
+  <div class="nav-menu">
+  <ul class="collapsible" data-collapsible="accordion">
+  
+    
+    
+    
+    
+    <li class="active">
+      
+        <a href="/roo_docs_site/" class="waves-effect">Overview</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/roo_docs_site/diagrams_and_flows/" class="waves-effect">Diagrams & Flows</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a class="collapsible-header waves-effect ">Roadmap</a>
+        <ul class="collapsible-body ">
+          
+            <li class="" >
+                <a href="/roo_docs_site/roadmap/phase-one/">Phase One</a>
+            </li>
+          
+            <li class="" >
+                <a href="/roo_docs_site/roadmap/phase-two">Phase Two</a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/roo_docs_site/deploy-roo/" class="waves-effect">Deploy Roo</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/roo_docs_site/technical-faq/" class="waves-effect">Tech FAQ</a>
+      
+    </li>
+  
+</ul>
+  </div>
+  <div class="logo-partnership"><img src="img/IDEOorgLogo_WebColor.png"/></div>  
+</div>
+
+
+
+    <main>
+      <div class="container">
+        <article class="page">
+  <h1 class="page-title">Overview</h1>
+  
+  <div class="page-content">
+    <style>
+  td {
+    vertical-align: top;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+</style>
+
+<div class="row">
+  <div class="col s12 l6">
+    <div class="img-small">
+      <img src="img/roo_party.gif" />
+    </div>
+  </div>
+  <div class="col s12 l6">
+    <h3>Shortcuts</h3>
+    <ul>
+      <li>
+        <a href="https://drive.google.com/file/d/1yPq2xLPYSEOrjSDAR8XxCby0sPlJCJow/view?usp=sharing" target="_blank">Theory of change</a><span> (PDF)</span>
+      </li>
+      <li>
+        <a href="" style="color:red" target="_blank">Roo demo video</a><span> (YouTube)</span>
+      </li>
+      <li>
+        <a href="" style="color:red" target="_blank">"How Roo works" Presentation (name?)</a><span> (format??)</span>
+      </li>
+      <li>
+        <a href="https://docs.google.com/presentation/d/1TDnPto_Cl4piWOrG6cf-_XmdVNg-Aqdwp1QLzIyLqos/edit?usp=sharing" target="_blank">Chatbot code walkthrough</a><span></span>
+      </li>
+      <li>
+        <a href="https://github.com/IDEOorg/steps-bot" target="_blank">Chatbot Repo</a><span> (Github)</span>
+      </li>
+      <li>
+        <a href="https://github.com/IDEOorg/steps/" target="_blank">Coach App + Database Repo</a><span> (Github)</span>
+      </li>
+      <li>
+        IDEO.org accounts credentials (restricted) are are in 1Password (including file called "env vars - Steps Dev...")
+      </li>
+      <li>
+        <a href="mailto:roo@ideo.org">Contact IDEO.org about Roo</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 l6">
+    <h3>What is Roo?</h3>
+    <p>
+      Roo is a collection of software services. It's purpose is to help, remind, and encourage clients of financial coaching services. Roo is also the name of the chatbot character inlcuded in the platform. Check out this <a href="" style="color:red" target="_blank">deck</a> and this <a href="" style="color:red" target="_blank">video</a> for more details on how it works and what it does.
+    </p>
+    <p>
+      Roo was created in 2018 by <a href="https://ideo.org" target="_blank">IDEO.org</a>. It is an open-source project under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
+    </p>
+  </div>
+  <div class="col s12 l6">
+    <div class="img-full">
+      <img src="img/relationshipdiagram.png" />
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 l12">
+    <h3>Project Status</h3>
+    <p>
+      The project is open-sourced and publicly available but not easily deployed without developer support. Organizations who wish to use Roo are encouraged to do so, but we are unable to provide 1:1 support beyond these documents at this time.
+    </p>
+    <p>
+      Our current roadmap includes:
+    </p>
+    <table>
+      <tr>
+        <td>
+          <h4 style="display: inline"><a href="/roadmap/phase-one">Phase One</a></h4><span class="italic">&nbsp;&nbsp;&nbsp;Q4, 2018 - Q1, 2019</span>
+          <ul>
+            <li>Continued pilot</li>
+            <li>Feature development</li>
+            <li>Impact analysis</li>
+          </ul>
+        </td>
+        <td>
+          <h4 style="display: inline"><a href="/roadmap/phase-two">Phase Two</a></h4><span class="italic">&nbsp;&nbsp;&nbsp;Q1 - Q3, 2019</span>
+          <ul>
+            <li>Continued funding</li>
+            <li>Future features design (funding dependent)</li>
+            <li>Public launch</li>
+            <li>CRM integration (funding dependent)</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+</div>
+
+<div class="row">
+  <div class="col s12 l6">
+    <h3>Chatbot</h3>
+    <p>
+       The chatbot handles messages to/from the client via SMS or Facebook messenger. It is not a very bright bot. It can only handle responses that are hardcoded into the bot's scripts. There is no natural language processing, machine-learning, or AI. 
+    </p>
+    <p>
+      In addition to handling text-based conversations, the chatbot runs routines at regular intervals to send check-ins, story content, and reminders to clients.
+    </p>
+    <p>
+      The chatbot is based on the <a href="https://botkit.ai/" target="_blank">Botkit framework</a>. It is a Node server that works with Twilio and Facebook APIs. In our case, it is hosted on Heroku.
+    </p>
+    <p>
+      Full documentation can be found at the bot's <a href="https://github.com/IDEOorg/steps-bot" target="_blank">Github repo</a> and in <a href="" style="color:red" target="_blank">this presentation</a>.
+    </p>.
+  </div>
+  <div class="col s12 l6">
+    <div class="img-small">
+      <img src="img/bot_logos.png" />
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 l6">
+    <h3>Coach Application</h3>
+    <p>
+      The coach application is used by the coach in a coaching session to create a digital workplan for their client. This workplan is saved to the database and is read by the bot when sending check-ins and reminders to the client.
+    </p>
+    <p>
+      The coach application is a React/Redux application and is hosted on the same instance as the database (in our case, on Heroku). 
+    </p>
+    <p>
+      Full documentation of the application can be found at application's <a href="" style="color:red" target="_blank">Github repo</a>.
+    </p>
+  </div>
+  <div class="col s12 l6">
+    <div class="img-small">
+      <img src="img/coach_app_logos.png" />
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 l6">
+    <h3>Database</h3>
+    <p>
+      The database stores data related to clients and their workplans. It is not connected to any other data sources such as a CRM. It does not hold financial data such as credit scores or bank account information.
+    </p>
+    <p>
+      The primary purpose of the database is to store workplans for clients. These are the basis of the chatbot's interactions. Additionally, it stores records of all messages sent through the chatbot, story content, and basic data about coaches and the organizations they work for (name, email, etc). 
+    </p>
+    <p>
+      The database was built as a Node server running Express on top of a Postgres database. NOTE: the database code is in the same <a href="" style="color:red" target="_blank">Github repo</a> as the coach application and are usually run simulateously. It appears in the directory named "api" within the "src" directory. 
+    </p>
+  </div>
+  <div class="col s12 l6">
+    <div class="img-small">
+      <img src="img/db_logos.png" />
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col l12">
+    <h3>Contact</h3>
+    <p>
+      Please check the <a href="" style="color: red">FAQ</a>. If you question is not answered there, you can email us at <a href="mailto:roo@ideo.org" style="color:red">roo@ideo.org</a>
+    </p>    
+  </div>
+<div>
+</div></div>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script type="text/javascript" src="vendor/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="vendor/materialize/js/materialize.min.js"></script>
+<script>
+    $(".button-collapse").sideNav();
+
+    var relative = null;
+    if (location.protocol === 'file:') {
+        relative = Array($('link[rel="canonical"]').attr('href').match(/\//g).length-2).join('../');
+        if (relative == '') relative = './';
+    }
+
+    function to_relative(link, index) {
+        if (!relative) return link;
+        var hash = link ? link.match(/#.*$/) : null;
+        if (hash) link = link.replace(/#.*$/, '');
+        return link?(link.replace(/^\//, relative)+(index?(link.substr(-1)=='/'?'index.html':''):'')+(hash?hash[0]:'')):null;
+    }
+
+    if (relative) {
+        $('a').attr('href', function(a,b){return to_relative(b, true);});
+        // $('img').attr('src', function(a,b){return to_relative(b, false);});
+    }
+
+    if(window.location.protocol !== "file:") {
+        var page = $("main");
+        var nav = $('.side-nav li');
+        var activeClass = 'active';
+
+        function loadPage(url) {
+            page.fadeOut(50, function(){
+                page.load(url + " main>*", loadComplete);
+            });
+
+            nav.removeClass(activeClass);
+            nav.find('a[href="'+window.location.pathname+'"]').parent().addClass(activeClass);        
+        }
+
+        function loadComplete(responseText) {
+            document.title = $(responseText).filter("title").text();
+            
+            window.scrollTo(0,0);
+            $('.side-nav').sideNav("hide");
+            $('.materialboxed').materialbox();
+            page.fadeIn(150);
+        }
+
+        nav.find('a').click(function(e){
+            e.preventDefault();
+            if(this.href && window.location.href != this.href) {
+                window.history.pushState({}, '', this.href);
+                loadPage(this.href);
+
+                return false;
+            }
+        });
+
+        window.addEventListener('popstate', function(e){
+            loadPage(window.location.href);
+        });
+    }
+</script>
+
+  </body>
+</html>
