@@ -9,8 +9,8 @@
 title: Docs and Reference
 email: support@helloroo.zendesk.com
 description: Summary and implementation guidelines for Roo, a financial coaching chatbot platform
-url: "" # If you are hosting online - the base hostname & protocol for your site
-baseurl: "/roo_docs_site" # the subpath of your site, e.g. /blog
+url: "https://ideoorg.github.io/roo_docs_site" # If you are hosting online - the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
 
 # Build settings
 markdown: kramdown
