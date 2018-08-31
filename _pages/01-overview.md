@@ -24,25 +24,22 @@ title: Overview
     <h3>Shortcuts</h3>
     <ul>
       <li>
-        <a href="https://drive.google.com/file/d/1yPq2xLPYSEOrjSDAR8XxCby0sPlJCJow/view?usp=sharing" target="_blank">Theory of change</a><span> (PDF)</span>
+        <a href="https://drive.google.com/file/d/1yPq2xLPYSEOrjSDAR8XxCby0sPlJCJow/view?usp=sharing" target="_blank">Theory of change</a>
       </li>
       <li>
-        <a href=""  style="color:red" target="_blank">Roo demo video</a><span> (YouTube)</span>
+        <a href=""  style="color:red" target="_blank">Roo demo video</a>
       </li>
       <li>
-        <a href=""  style="color:red" target="_blank">"How Roo works" Presentation (name?)</a><span> (format??)</span>
+        <a href=""  style="color:red" target="_blank">"How Roo works" Presentation (name?)</a>
       </li>
       <li>
-        <a href="https://docs.google.com/presentation/d/1TDnPto_Cl4piWOrG6cf-_XmdVNg-Aqdwp1QLzIyLqos/edit?usp=sharing" target="_blank">Chatbot code walkthrough</a><span></span>
+        <a href="https://docs.google.com/presentation/d/1TDnPto_Cl4piWOrG6cf-_XmdVNg-Aqdwp1QLzIyLqos/edit?usp=sharing" target="_blank">Chatbot code walkthrough</a>
       </li>
       <li>
-        <a href="https://github.com/IDEOorg/steps-bot" target="_blank">Chatbot Repo</a><span> (Github)</span>
+        <a href="https://github.com/IDEOorg/steps-bot" target="_blank">Chatbot Repo</a>
       </li>
       <li>
-        <a href="https://github.com/IDEOorg/steps/" target="_blank">Coach App + Database Repo</a><span> (Github)</span>
-      </li>
-      <li>
-        IDEO.org accounts credentials (restricted) are are in 1Password (including file called "env vars - Steps Dev...")
+        <a href="https://github.com/IDEOorg/steps/" target="_blank">Coach App + Database Repo</a>
       </li>
       <li>
         <a href="mailto:roo@ideo.org">Contact IDEO.org about Roo</a>
