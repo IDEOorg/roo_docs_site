@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://roo-docs-site.s3-website-us-east-1.amazonaws.com/</loc>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>http://roo-docs-site.s3-website-us-east-1.amazonaws.com/roadmap/phase-one/</loc>
+<loc>http://localhost:4000/roadmap/phase-one/</loc>
 </url>
 <url>
-<loc>http://roo-docs-site.s3-website-us-east-1.amazonaws.com/diagrams_and_flows/</loc>
+<loc>http://localhost:4000/diagrams_and_flows/</loc>
 </url>
 <url>
-<loc>http://roo-docs-site.s3-website-us-east-1.amazonaws.com/roadmap/phase-two</loc>
+<loc>http://localhost:4000/roadmap/phase-two</loc>
 </url>
 <url>
-<loc>http://roo-docs-site.s3-website-us-east-1.amazonaws.com/deploy-roo/</loc>
+<loc>http://localhost:4000/deploy-roo/</loc>
 </url>
 <url>
-<loc>http://roo-docs-site.s3-website-us-east-1.amazonaws.com/technical-faq/</loc>
+<loc>http://localhost:4000/technical-faq/</loc>
 </url>
 <url>
-<loc>http://roo-docs-site.s3-website-us-east-1.amazonaws.com/vendor/materialize/</loc>
+<loc>http://localhost:4000/vendor/materialize/</loc>
 </url>
 </urlset>
