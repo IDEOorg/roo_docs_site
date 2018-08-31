@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: http://roo-docs-site.s3-website-us-east-1.amazonaws.com/sitemap.xml

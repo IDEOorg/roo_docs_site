@@ -9,7 +9,7 @@
 title: Docs and Reference
 email: support@helloroo.zendesk.com
 description: Summary and implementation guidelines for Roo, a financial coaching chatbot platform
-url: "" # If you are hosting online - the base hostname & protocol for your site
+url: "http://roo-docs-site.s3-website-us-east-1.amazonaws.com" # If you are hosting online - the base hostname & protocol for your site
 baseurl: "/" # the subpath of your site, e.g. /blog
 
 # Build settings
@@ -19,15 +19,3 @@ kramdown:
 
 include: ['_pages']
 exclude: ['Gemfile', 'Gemfile.lock']
-
-navigation:
-- title: Overview
-  url: /
-- title: Diagrams and Flows
-  url: /diagrams_and_flows/
-- title: Using Roo
-  url: /using-roo/
-- title: Phase One
-  url: /roadmap/phase-one
-- title: Phase Two
-  url: /roadmap/phase-two
