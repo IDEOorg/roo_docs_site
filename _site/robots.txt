@@ -1,1 +1,1 @@
-Sitemap: https://priceless-cori-d26a61.netlify.com//sitemap.xml
+Sitemap: /sitemap.xml
