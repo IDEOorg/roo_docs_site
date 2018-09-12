@@ -6776,6 +6776,50 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help; }
 
+.controller {
+  margin-top: 30px; }
+
+.title-break {
+  margin-bottom: 0; }
+
+.highlight-title {
+  background: #c2bdde;
+  color: white;
+  padding: 10px; }
+
+.inline-code {
+  background: #fafafa;
+  color: black;
+  font-family: monospace; }
+
+.schema-key {
+  color: #905; }
+
+.schema-json {
+  color: #07a; }
+
+.schema-comment {
+  color: grey; }
+
+.schema-line {
+  font-family: monospace;
+  margin: 0;
+  padding: 0; }
+
+.schema-div {
+  background: #f5f2f0;
+  margin: 7px;
+  padding: 33px 14px; }
+
+.schema-string {
+  color: #537510; }
+
+.schema-num {
+  color: #17509e; }
+
+.schema-date {
+  color: #530081; }
+
 html {
   line-height: 1.8;
   font-size: 14px;

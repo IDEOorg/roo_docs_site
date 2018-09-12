@@ -3,52 +3,6 @@ permalink: "/api/web-app"
 layout: page
 title: Web App API
 ---
-<style>
-  .controller {
-    margin-top: 30px;
-  }
-  .title-break {
-    margin-bottom: 0;
-  }
-  .highlight-title {
-    background: #c2bdde;
-    color: white;
-    padding: 10px;
-  }
-  .inline-code {
-    background: rgba(250, 250, 250, 1);
-    color: black;
-    font-family: monospace;
-  }
-  .schema-key {
-    color: #905;
-  }
-  .schema-json {
-    color: #07a ;
-  }
-  .schema-comment {
-    color: grey;
-  }
-  .schema-line {
-    font-family: monospace;
-    margin: 0;
-    padding: 0;
-  }
-  .schema-div {
-    background: #f5f2f0;
-    margin: 7px;
-    padding: 33px 14px;
-  }
-  .schema-string {
-    color: #537510;
-  }
-  .schema-num {
-    color: #17509e;
-  }
-  .schema-date {
-    color: #530081;
-  }
-</style>
 
 <div class="row">
   <div class="col l12 controller">
@@ -205,6 +159,7 @@ title: Web App API
 <div class="row">
   <div class="col l12 controller">
     <h2>Data Shapes</h2>
+    <p>For implementation details, refer to <span class="inline-code">src/migration/deploy</span> within the api source code.</p>
   </div>
 </div>
 
