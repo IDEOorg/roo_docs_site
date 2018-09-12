@@ -31,9 +31,12 @@
     .collapsible-body.active {
       display: block;
 
-      // li.active {
-      //   background-color: $primary-color-light;
-      // }
+      li.active {
+        background-color: rgba(0, 0, 0, 0.05);
+        a {
+          color: black;
+        }
+      }
     }
 
     .collapsible-body li a {

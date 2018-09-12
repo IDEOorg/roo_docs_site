@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+  
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>IDEO.org</title>
+  <meta name="description" content="Summary and implementation guidelines for Roo, a financial coaching chatbot platform">
+  <link rel="icon" type="image/png" href="../img/roo_favicon.ico" sizes="32x32">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="canonical" href="/ideo-org/" />
+  <script src="../assets/prism.js"></script>
+</head>
+
+
+  <body>
+
+    <header>
+  <nav class="top-nav">
+    <div class="container">
+      <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+        <img class="menu-icon" src="../img/menu-icon.svg"/>
+      </a>
+      <h1 class="nav-title">Docs and Reference</h1>
+    </div>
+  </nav>
+</header>
+<div id="slide-out" class="side-nav fixed">
+  <div class="logo"><img src="../img/roo_logo@3x.png"/></div>
+  <div class="nav-menu">
+  <ul class="collapsible" data-collapsible="accordion">
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/" class="waves-effect">Overview</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/documents/" class="waves-effect">Documents</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a class="collapsible-header waves-effect ">Roadmap</a>
+        <ul class="collapsible-body ">
+          
+            <li class="" >
+                <a href="/roadmap/phase-one/">Phase One</a>
+            </li>
+          
+            <li class="" >
+                <a href="/roadmap/phase-two">Phase Two</a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a class="collapsible-header waves-effect ">Using Roo</a>
+        <ul class="collapsible-body ">
+          
+            <li class="" >
+                <a href="/deploy-roo/">Deploy Roo</a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a class="collapsible-header waves-effect ">API</a>
+        <ul class="collapsible-body ">
+          
+            <li class="" >
+                <a href="/api/web-app">Web App API</a>
+            </li>
+          
+            <li class="" >
+                <a href="/api/bot">Bot API</a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/technical-faq/" class="waves-effect">Tech FAQ</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/user-resources/" class="waves-effect">User Resources</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="active">
+      
+        <a href="/ideo-org/" class="waves-effect">IDEO.org</a>
+      
+    </li>
+  
+</ul>
+  </div>
+  <div class="logo-partnership"><img src="../img/IDEOorgLogo_WebColor.png"/></div>  
+</div>
+
+
+
+    <main>
+      <div class="container">
+        <article class="page">
+  <h1 class="page-title">IDEO.org</h1>
+  
+  <div class="page-content">
+    <style>
+  .bold {
+    font-weight: bold;
+  }
+</style>
+
+<div class="row">
+  <div class="col s12 l6">
+    <h2>Looking for something?</h2>
+    <h4>ACCOUNT PASSWORDS</h4>
+    <p>These can be found in 1Password and should include "Steps Dev" in the title.</p>
+    <h4>ENV VARS</h4>
+    <p>
+      Original copies are stored in 1Password, and the most up to date values can be found in heroku. Heroku config vars can also be seen if you're signed into an authorized heroku account via the CLI by running 'heroku config'.
+    </p>
+    <h4>HOSTING/DNS</h4>
+    <p>"helloroo.org" was registered with domains.google.com using the Google account for "steps.developers@gmail.com." We are using <a href="https://dnsimple">DNS Simple</a> to manage DNS records.</p>
+    <p>This site is hosted on Amazon AWS using the "accounts@ideo.org" credentials. The bucket name is "roo-docs-site."</p>
+    <p>^ CHANGE  THIS IF WE GO WITH THE NETLIFY DEPLOYMENT</p>
+    <h4>STATIC ASSETS</h4>
+    <p>Images for Media objects and other static assets are stored in an AWS S3 bucket in the "accounts@ideo.org" account. The bucket name is "steps-application-public."</p>
+    <h4>OTHER DOCS</h4>
+      <ul>
+        <li>
+          <a href="https://drive.google.com/file/d/1yPq2xLPYSEOrjSDAR8XxCby0sPlJCJow/view?usp=sharing" target="_blank">Theory of change diagram</a>
+        </li>
+      </ul>
+    <h4>CONTACTS</h4> 
+    <p><span class="bold">IDEO.org</span> - lead dev is Matthew Epler (mepler@ideo.org or matthewepler@gmail.com) if you can't find something or have further questions.</p>
+    <p><span class="bold">8th Light</span> - our developer for summer of 2018. Created the coach application and database. Principles were Jim Remsik (jremsik@8thlight.com) and Connor Mendenhall (cmendenhall@8thlight.com).</p>
+  </div>
+</div>
+
+<div class="col s12 l6">
+  <h2>Application Notes</h2>
+  <h4>Deployment</h4>
+  <p>
+    We deployed the coaching app and database to Heroku. It's named "steps-test-pipeline" and appears as a single app in the list of our apps. The bot is also on heroku and is named "stepsroobot." There is also a staging bot named "stepsroobotstaging."
+  </p>
+  <h4>Continuous Integration and Deployment</h4>
+  <p>
+    We are using CircleCI (<a href="https://circleci.com/gh/IDEOorg/steps">our link</a>). You can login using your github credentials and see the setup for the "steps" repo (coach app + database). The bot is not using CI.
+  </p>
+  <p>
+    CircleCI runs all tests and db migrations whenever you push to develop or merge with production (or any other push or merge for that matter). If tests are successful, it will deploy the code to the proper platform (Heroku, for example). This happens thanks to a webhook set in Github (Settings &gt; Webhooks).
+  </p>
+  <p>
+    CircleCI will also produce a video for the Cypress E2E tests. These are useful to see exactly what the interface does when an error occurs and what actions led to the error. Finding the video is a little tough. CLick into the build that you're intersted in and then select the "Artifacts" tab at the top. Just below the tabs should appear a file directory. Click down into that to find the video file. 
+  </p>
+  <h4>Server Logging</h4>
+  <p>We are using Sentry for logging on Heroku. You can see the settings (and logs) by accessing the app on Heroku. Here's a direct link to the <a href="https://sentry.io/steps-admin/steps-admin/">production logs</a>, and there's one for staging too.</p>
+</div>
+
+<div class="col s12 l6">
+  <h4>ABOUT THIS SITE</h4>
+  <p>
+    This site was developed using <a href="https://github.com/ideo/chronicle">Chronicle</a>, an IDEO project by Derek Olson.
+  </p>
+</div>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script type="text/javascript" src="../vendor/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../vendor/materialize/js/materialize.min.js"></script>
+<script>
+    $(".button-collapse").sideNav();
+
+    var relative = null;
+    if (location.protocol === 'file:') {
+        relative = Array($('link[rel="canonical"]').attr('href').match(/\//g).length-2).join('../');
+        if (relative == '') relative = './';
+    }
+
+    function to_relative(link, index) {
+        if (!relative) return link;
+        var hash = link ? link.match(/#.*$/) : null;
+        if (hash) link = link.replace(/#.*$/, '');
+        return link?(link.replace(/^\//, relative)+(index?(link.substr(-1)=='/'?'index.html':''):'')+(hash?hash[0]:'')):null;
+    }
+
+    if (relative) {
+        $('a').attr('href', function(a,b){return to_relative(b, true);});
+        // $('img').attr('src', function(a,b){return to_relative(b, false);});
+    }
+
+    if(window.location.protocol !== "file:") {
+        var page = $("main");
+        var nav = $('.side-nav li');
+        var activeClass = 'active';
+
+        function loadPage(url) {
+            page.fadeOut(50, function(){
+                page.load(url + " main>*", loadComplete);
+            });
+
+            nav.removeClass(activeClass);
+            nav.find('a[href="'+window.location.pathname+'"]').parent().addClass(activeClass);        
+        }
+
+        function loadComplete(responseText) {
+            document.title = $(responseText).filter("title").text();
+            
+            window.scrollTo(0,0);
+            $('.side-nav').sideNav("hide");
+            $('.materialboxed').materialbox();
+            page.fadeIn(150);
+        }
+
+        nav.find('a').click(function(e){
+            e.preventDefault();
+            if(this.href && window.location.href != this.href) {
+                window.history.pushState({}, '', this.href);
+                loadPage(this.href);
+
+                return false;
+            }
+        });
+
+        window.addEventListener('popstate', function(e){
+            loadPage(window.location.href);
+        });
+    }
+</script>
+
+  </body>
+</html>

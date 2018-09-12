@@ -14,6 +14,7 @@
   <link rel="icon" type="image/png" href="img/roo_favicon.ico" sizes="32x32">
   <link rel="stylesheet" href="css/main.css">
   <link rel="canonical" href="/" />
+  <script src="assets/prism.js"></script>
 </head>
 
 
@@ -50,7 +51,7 @@
     
     <li class="">
       
-        <a href="/diagrams_and_flows/" class="waves-effect">Diagrams & Flows</a>
+        <a href="/documents/" class="waves-effect">Documents</a>
       
     </li>
   
@@ -81,7 +82,35 @@
     
     <li class="">
       
-        <a href="/deploy-roo/" class="waves-effect">Deploy Roo</a>
+        <a class="collapsible-header waves-effect ">Using Roo</a>
+        <ul class="collapsible-body ">
+          
+            <li class="" >
+                <a href="/deploy-roo/">Deploy Roo</a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a class="collapsible-header waves-effect ">API</a>
+        <ul class="collapsible-body ">
+          
+            <li class="" >
+                <a href="/api/web-app">Web App API</a>
+            </li>
+          
+            <li class="" >
+                <a href="/api/bot">Bot API</a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -92,6 +121,26 @@
     <li class="">
       
         <a href="/technical-faq/" class="waves-effect">Tech FAQ</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/user-resources/" class="waves-effect">User Resources</a>
+      
+    </li>
+  
+    
+    
+    
+    
+    <li class="">
+      
+        <a href="/ideo-org/" class="waves-effect">IDEO.org</a>
       
     </li>
   
@@ -116,61 +165,47 @@
   .italic {
     font-style: italic;
   }
+
+  .logos {
+    margin-top: 50px;
+  }
 </style>
 
-<div class="row">
+<div class="row"> 
   <div class="col s12 l6">
-    <div class="img-small">
-      <img src="img/roo_party.gif" />
-    </div>
-  </div>
-  <div class="col s12 l6">
-    <h3>Shortcuts</h3>
-    <ul>
-      <li>
-        <a href="https://drive.google.com/file/d/1yPq2xLPYSEOrjSDAR8XxCby0sPlJCJow/view?usp=sharing" target="_blank">Theory of change</a>
+    <img src="img/roo_party.gif" style="width: 125px" />
+    <h3>Welcome, Developers!</h3>
+    <p>This purpose of this site is to help you get started using Roo at your own organization. There's a lot of moving parts but we've done our best to make it a smooth implementation. <a href="mailto:roo@ideo.org">Contact us</a> if you have any questions along the way and we'll do our best to help!</p>
+    <h3>Recommendations</h3>
+    <p>While not required, we recommend taking the following steps in order. This will give you a big-picture view of what Roo is for as well as all the technical details of how it's built. It also includes instructions on how to deploy Roo to the hosting service of your choice. Of course, you can feel free to browse the site's contents using the nav on the left at anytime.</p>
+    <ol>
+       <li>
+        Check out <a href="https://www.dropbox.com/s/eihugy98dzjf649/Janice3.0_HowItworksV2.pdf?dl=0" target="_blank">this presentation </a> about Roo. It gives a good overview of what Roo is and does, as well as our thinking behind its design. 
       </li>
       <li>
-        <a href="" style="color:red" target="_blank">Roo demo video</a>
+        Watch the <a href="" style="color:red" target="_blank">Roo demo video</a> to see our platform in action and know what you can expect. 
       </li>
       <li>
-        <a href="" style="color:red" target="_blank">"How Roo works" Presentation (name?)</a>
+        Familiarize yourself with our roadmap (<a href="http://localhost:4000/roadmap/phase-one/">phase one</a> and <a href="http://localhost:4000/roadmap/phase-two/">phase two</a>) so you know what's coming up over the next few months. 
       </li>
       <li>
-        <a href="https://docs.google.com/presentation/d/1TDnPto_Cl4piWOrG6cf-_XmdVNg-Aqdwp1QLzIyLqos/edit?usp=sharing" target="_blank">Chatbot code walkthrough</a>
+        Take a tour of the documents in the <a href="http://localhost:4000/documents/">Diagrams and Flows</a> section. These will be valuable resources as you implement Roo and build an understanding of how it works. 
       </li>
       <li>
-        <a href="https://github.com/IDEOorg/steps-bot" target="_blank">Chatbot Repo</a>
+        Dive into the instructions for <a href="http://localhost:4000/deploy-roo/">deploying Roo</a>. 
       </li>
       <li>
-        <a href="https://github.com/IDEOorg/steps/" target="_blank">Coach App + Database Repo</a>
+       Read our <a href="http://localhost:4000/technical-faq/">technical FAQs</a> when you get stuck. 
       </li>
       <li>
-        <a href="mailto:roo@ideo.org">Contact IDEO.org about Roo</a>
+        Set your users up for success by directing them to our <a href="" style="color: red;">user resources</a>.
       </li>
-    </ul>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 l6">
-    <h3>What is Roo?</h3>
-    <p>
-      Roo is a collection of software services. It's purpose is to help, remind, and encourage clients of financial coaching services. Roo is also the name of the chatbot character inlcuded in the platform. Check out this <a href="" style="color:red" target="_blank">deck</a> and this <a href="" style="color:red" target="_blank">video</a> for more details on how it works and what it does.
-    </p>
-    <p>
-      Roo was created in 2018 by <a href="https://ideo.org" target="_blank">IDEO.org</a>. It is an open-source project under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
-    </p>
-  </div>
-  <div class="col s12 l6">
-    <div class="img-full">
-      <img src="img/relationshipdiagram.png" />
-    </div>
+    </ol>
   </div>
 </div>
 
 <div class="row">
-  <div class="col s12 l12">
+  <div class="col s12 l6">
     <h3>Project Status</h3>
     <p>
       The project is open-sourced and publicly available but not easily deployed without developer support. Organizations who wish to use Roo are encouraged to do so, but we are unable to provide 1:1 support beyond these documents at this time.
@@ -220,7 +255,7 @@
     </p>.
   </div>
   <div class="col s12 l6">
-    <div class="img-small">
+    <div class="img-small logos">
       <img src="img/bot_logos.png" />
     </div>
   </div>
@@ -229,7 +264,7 @@
   <div class="col s12 l6">
     <h3>Coach Application</h3>
     <p>
-      The coach application is used by the coach in a coaching session to create a digital workplan for their client. This workplan is saved to the database and is read by the bot when sending check-ins and reminders to the client.
+      The coach application is used by the coach in a coaching session to create a digital workplan for their client. This workplan is saved to the database, which is in turn read by the bot when sending check-ins and reminders to the client.
     </p>
     <p>
       The coach application is a React/Redux application and is hosted on the same instance as the database (in our case, on Heroku). 
@@ -239,7 +274,7 @@
     </p>
   </div>
   <div class="col s12 l6">
-    <div class="img-small">
+    <div class="img-small logos">
       <img src="img/coach_app_logos.png" />
     </div>
   </div>
@@ -258,7 +293,7 @@
     </p>
   </div>
   <div class="col s12 l6">
-    <div class="img-small">
+    <div class="img-small logos">
       <img src="img/db_logos.png" />
     </div>
   </div>

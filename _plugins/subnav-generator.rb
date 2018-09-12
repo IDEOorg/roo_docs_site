@@ -48,6 +48,9 @@ class SubnavGenerator < Jekyll::Generator
         folderHash = nav.find {|p| p['key'] == key }
         if( !folderHash )
           folderName = getTitle(key)
+          if (folderName == "Api")
+            folderName = "API"
+          end
           folderHash = { 'key' => key, 'title' => folderName, 'children' => []}
           nav.push(folderHash)
         end

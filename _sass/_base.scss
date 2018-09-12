@@ -24,6 +24,12 @@ body {
     background: #efeff4;
 }
 
+pre {
+    background: rgba(250, 250, 250, 1);
+    padding: 15px;
+    white-space: pre-line;
+}
+
 .page-title {
     color: #564e8d;
     margin: 0 0 $spacing-unit;
