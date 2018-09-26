@@ -15,8 +15,7 @@ title: Phase Two
       <p>
         We are excited about the future of conversational interfaces. With a rapidly growing ecosystem of advanced tools in AI and automation there are a great number of opportunities to expand Roo's functionality. We hope to explore these with more funding. 
       </p>
-      <p style="font-style: italic">Example Future Features</p>
-      <p style="color: red">Get stuff from Rafa/Yifan</p>
+      <!-- -->
       <h3>Q2, 2019</h3>
       <h4>Public launch</h4>
       <p>

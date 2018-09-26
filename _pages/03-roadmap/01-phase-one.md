@@ -37,7 +37,7 @@ title: Phase One
                 <li>Printer-friendly workplan</li>
                 <li>Archive/Unarchive a task</li>
                 <li>User friendly error messages</li>
-                <li><a href="link_to_zips_on_gmail" style="color: red" target="_blank">New branding/styling</a></li>
+                <li>New branding/styling</a></li>
                 <li>Ability to re-order steps in edit mode for a task</li>
                 <li>Add to template tasks</li>
                 <li>Improved client sign-in for viewing their workplan</li>

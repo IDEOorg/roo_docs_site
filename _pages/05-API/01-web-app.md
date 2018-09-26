@@ -185,10 +185,7 @@ title: Web App API
     </div>
     <h4>Example</h4>
     <pre>
-      <code
-        class="language-JSON"
-        data-jsonp="https://api.github.com/repos/leaverou/prism/contents/prism.js"
-      >
+      <code class="language-JSON">
         {
           "id": 3, 
           "name": "IDEO.org",
@@ -277,10 +274,7 @@ title: Web App API
     </div>
     <h4>Example</h4>
     <pre>
-      <code
-        class="language-JSON"
-        data-jsonp="https://api.github.com/repos/leaverou/prism/contents/prism.js"
-      >
+      <code class="language-JSON">
         {
           "id": 111, 
           "first_name": "MC",
@@ -373,10 +367,7 @@ title: Web App API
     </div>
     <h4>Example</h4>
     <pre>
-    <code
-      class="language-JSON"
-      data-jsonp="https://api.github.com/repos/leaverou/prism/contents/prism.js"
-    >
+    <code class="language-JSON">
       {
         "id": 918,
         "title": "Work on developing your small business",
@@ -447,10 +438,7 @@ title: Web App API
     </div>
     <h4>Example</h4>
     <pre>
-    <code
-      class="language-JSON"
-      data-jsonp="https://api.github.com/repos/leaverou/prism/contents/prism.js"
-    >
+    <code class="language-JSON">
       {
         "id": 46,
         "task_id": null,
@@ -503,10 +491,7 @@ title: Web App API
     </div>
     <h4>Example</h4>
     <pre>
-    <code
-      class="language-JSON"
-      data-jsonp="https://api.github.com/repos/leaverou/prism/contents/prism.js"
-    >
+    <code class="language-JSON">
       {
         "id": 7630,
         "text": "Here's something inspiring to check out between being a superstar and knocking out all your action items:",
@@ -582,10 +567,7 @@ title: Web App API
     </div>
     <h4>Example</h4>
     <pre>
-    <code
-      class="language-JSON"
-      data-jsonp="https://api.github.com/repos/leaverou/prism/contents/prism.js"
-    >
+    <code class="language-JSON">
       {
         "id": 52,
         "status": "REPLIED",
