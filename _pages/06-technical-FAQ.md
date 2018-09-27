@@ -121,6 +121,14 @@ title: Tech FAQ
     <p>
       Not so bad, right?
     </p>
+    <h4>All I see is a blank light blue background when I run the web app.</h4>
+    <p>
+      That's not a question, but you're in pain so we'll let it slide. You should look in you <span class="inline-code">.env</span> file and make sure <span class="inline-code">AUTH0_ENABLED</span> is set to <span class="inline-code">true</span>. Restart the app if you change it so that it takes effect. 
+    </p>
+    <h4>What I get the error ”Cannot read property ‘words’ of undefined.</h4>
+    <p> 
+      This is an error thrown by <span class="inline-code">crypto.js</span>. It means you haven't provided a secret key (a custom string) to encrypt stuff with. Likely this is an environment variable that either lives in an <span class="inline-code">.env</span> file or is passed in via the terminal when you start your application/script. 
+    </p>
     <h4>Don't see your question here?</h4>
     <p>Email us at <a href="mailto:roo@ideo.org">roo@ideo.org</a></p>
   </div>
