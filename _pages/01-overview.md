@@ -52,7 +52,7 @@ title: Overview
       <div class="li-flex">
         <img src="{{page.root}}img/3.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
-          Familiarize yourself with our roadmap (<a href="/roadmap/phase-one">phase one</a> and <a href="http://localhost:4000/roadmap/phase-two/">phase two</a>) so you know what's coming up over the next few months. 
+          Familiarize yourself with our roadmap (<a href="/roadmap/phase-one">phase one</a> and <a href="/roadmap/phase-two">phase two</a>) so you know what's coming up over the next few months. 
         </li>
       </div>
       <div class="li-flex">
