@@ -79,6 +79,12 @@ title: Overview
           Set your users up for success by directing them to our <a href="/current-users">training videos</a>.
         </li>
       </div>
+      <div class="li-flex">
+        <img src="{{page.root}}img/8.png" class="bullets" />
+        <li class="li-self" style="list-style-type: none; ">
+          Want the full pitch on Roo and how we got this crazy idea? <a href="https://drive.google.com/file/d/1yfqaEh8yw9y0kjo1qP5AAIQ6SzeZnoQi/view?usp=sharing">Roo Presentation - Prosperity Now Summit, 09/2018</a>.
+        </li>
+      </div>
     </ul>
   </div>
 </div>
