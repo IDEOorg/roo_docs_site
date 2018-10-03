@@ -52,25 +52,25 @@ title: Overview
       <div class="li-flex">
         <img src="{{page.root}}img/3.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
-          Familiarize yourself with our roadmap (<a href="http://localhost:4000/roadmap/phase-one/">phase one</a> and <a href="http://localhost:4000/roadmap/phase-two/">phase two</a>) so you know what's coming up over the next few months. 
+          Familiarize yourself with our roadmap (<a href="/roadmap/phase-one">phase one</a> and <a href="http://localhost:4000/roadmap/phase-two/">phase two</a>) so you know what's coming up over the next few months. 
         </li>
       </div>
       <div class="li-flex">
         <img src="{{page.root}}img/4.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
-          Take a tour of the documents in the <a href="http://localhost:4000/documents/">Diagrams and Flows</a> section. These will be valuable resources as you implement Roo and build an understanding of how it works. 
+          Take a tour of the documents in the <a href="/documents">Diagrams and Flows</a> section. These will be valuable resources as you implement Roo and build an understanding of how it works. 
         </li>
       </div>
       <div class="li-flex">
         <img src="{{page.root}}img/5.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
-          Dive into the instructions for <a href="http://localhost:4000/deploy-roo/">deploying Roo</a>. 
+          Dive into the instructions for <a href="/deploy-roo">deploying Roo</a>. 
         </li>
       </div>
       <div class="li-flex">
         <img src="{{page.root}}img/6.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
-          Read our <a href="http://localhost:4000/technical-faq/">technical FAQs</a> when you get stuck. 
+          Read our <a href="/technical-faq">technical FAQs</a> when you get stuck. 
         </li>
       </div>
       <div class="li-flex">
