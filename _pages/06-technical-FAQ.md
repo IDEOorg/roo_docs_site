@@ -131,9 +131,13 @@ title: Tech FAQ
     <p>
       That's not a question, but you're in pain so we'll let it slide. You should look in you <span class="inline-code">.env</span> file and make sure <span class="inline-code">AUTH0_ENABLED</span> is set to <span class="inline-code">true</span>. Restart the app if you change it so that it takes effect. 
     </p>
-    <h4 class="q">What I get the error ”Cannot read property ‘words’ of undefined.</h4>
+    <h4 class="q">What if I get the error ”Cannot read property ‘words’ of undefined.</h4>
     <p> 
       This is an error thrown by <span class="inline-code">crypto.js</span>. It means you haven't provided a secret key (a custom string) to encrypt stuff with. Likely this is an environment variable that either lives in an <span class="inline-code">.env</span> file or is passed in via the terminal when you start your application/script. 
+    </p>
+    <h4 class="q">I'm getting an API error that says "Signing Key Not Found."</h4>
+    <p> 
+      This is an error thrown by Auth0. It means the auth token you are using in your request does not match the tenant it was made with. Make sure you're using a 'staging' token when talking to the staging server and the 'production' token for the production server (etc, etc).
     </p>
     <h4 class="q">Don't see your question here?</h4>
     <p>Email us at <a href="mailto:roo@ideo.org">roo@ideo.org</a></p>
