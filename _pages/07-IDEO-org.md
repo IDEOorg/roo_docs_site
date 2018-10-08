@@ -60,6 +60,15 @@ title: IDEO.org
     <p>
       We are using Sentry for logging on Heroku. You can see the settings (and logs) by accessing the app on Heroku. Here's a direct link to the <a href="https://sentry.io/steps-admin/steps-admin/">production logs</a>, and there's one for staging too.
     </p>
+    <h4>Important Numbers</h4>
+    <p>
+      Staging Bot UserID: 116
+      Production Bot UserID: 41
+    </p>
+    <p>
+      Staging Twilio Number: 347-708-9316
+      Production Twilio Number: 646-798-8004
+    <p>
   </div>
 </div>
 
