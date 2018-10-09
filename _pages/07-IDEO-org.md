@@ -69,6 +69,10 @@ title: IDEO.org
       Staging Twilio Number: 347-708-9316
       Production Twilio Number: 646-798-8004
     <p>
+    <h4>Info about Access Tokens</h4>
+    <p>
+      Every 100 days, the access tokens need renewing. The current access tokens are in a file in 1Password with the title "Steps Auth Tokens." For instructions on how to get a new token, see the screenshots in the Admin repo. 
+    </p>
   </div>
 </div>
 
