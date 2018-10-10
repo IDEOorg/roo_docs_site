@@ -12,6 +12,14 @@ title: Deploy Roo
 
 <div class="row">
   <div class="col l8">
+    <p><em>
+      If you are part of the IDEO.org team or one of our collaborators and are looking for instructions for getting started with local development, please skip to the <a href="#localdev">Local Dev Setup</a> section.
+    </em></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col l8">
     <h3>Costs</h3>
     <p>
       Here is a <a href="https://docs.google.com/spreadsheets/d/1F1mNd1hYYDpQjE9O8Dh2_RCK67SJVY87ubHiRvbVwNk/edit?usp=sharing" target="_blank">Google Sheet</a> outlining the expected costs of deploying your own version of Roo. In the future, we hope to offer Roo as a service. Pricing for that has not been forecasted.
@@ -64,11 +72,12 @@ title: Deploy Roo
   </div>
 </div>
 
-<div class="row">
+<div id="localdev" class="row">
   <div class="col l8">
+    <h2>Local Dev Setup</h2>
     <h3>Setting up the Coach Application for Local Dev</h3>
     <ol>
-      <li>Create a directory and pull the repo into the directory.</li>
+      <li>Create a directory and clone the <a href="https://github.com/IDEOorg/steps">repo</a> into the directory.</li>
       <li>Follow the instructions in the README for creating your database.
         <ul>
           <li>
@@ -77,9 +86,43 @@ title: Deploy Roo
         </ul>
       </li>
       <li>Follow the instructions in "Refresh with latest build" section of th the README to installing all necessary packages.</li>
-      <li>Open the .env file you just made and set AUTH0_ENABLED to "false" for now.</li>
+      <li>You will need the appropriate values for the <span class="inline-code">.env</span> file at the root of the project. Contact us at <a href="mailto:roo@ideo.org">roo@ideo.org</a> if you have questions regarding this step.</li>
       <li>Start the app. Make sure you are using a version of Node >7.6.</li>
     </ol>
+    <br/>
+    <h3>Setting up the Bot Application</h3>
+    <p>
+      Because the bot relies on Twilio and Facebook Messenger and neither of these services supports the use of <span class="inline-code">localhost</span>, you must deploy the bot code before you can test it. It's a bummer, we know.
+    </p>
+    <p>
+      You will note need an <span class="inline-code">.env</span> since you cannot dev locally with the bot. Instead add the values outlined in the README directly into your deployment configuration.</p>
+    </p>
+    <ol>
+      <li>Create a directory and clone the <a href="https://github.com/IDEOorg/steps-bot">repo</a> into the directory.</li>
+      <li>Add your <span class="inline-code">.env</span> values into Heroku or whatever platform you're using to deploy.</li>
+      <li>Deploy and test!</li>
+    </ol>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col l8">
+    <h2>Important Notes</h2>
+    <h3>Creating coach accounts</h3>
+    <p>
+      In order to create users, you must first create an organization in the database. To do this, you should submit a POST request to the database with the following body format:
+    </p>
+    <pre>
+      {
+      "name": "Org Name",
+      "sms_number": "+15555555555",
+      "logo": "https://you.com/logo.png",
+      "phone": "+14444444444"
+      }     
+    </pre>
+    <p>
+      Note the id number of the org in the response body. Then go to the signup url: <span class="inline-code">https://your-app.com/signup/org_id</span>, and replace the "org_id" with the id number in the server response from the POST request. By using this link, any number of coaches can sign themselves up. Then they can login at <span class="inline-code">https://your-app.com</span> normally and create clients, etc. 
+    </p>
   </div>
 </div>
 

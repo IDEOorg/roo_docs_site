@@ -73,12 +73,18 @@ title: IDEO.org
     <p>
       Every 100 days, the access tokens need renewing. The current access tokens are in a file in 1Password with the title "Steps Auth Tokens." For instructions on how to get a new token, see the screenshots in the Admin repo. 
     </p>
+    <h4>How can I connect directly to the heroku database from the command line?</h4>
+    <p>
+      If you're signed into the Heroku CLI and have been added to the project in Heroku with the proper permissions, you can run a command like this: <span class="inline-code">heroku pg:psql --app steps-staging</span>. Easy peasy. Just switch out the name of the app to connect to another one. 
+    </p>
   </div>
 </div>
 
-<div class="col s12 l6">
-  <h4>ABOUT THIS SITE</h4>
-  <p>
-    This site was developed using <a href="https://github.com/ideo/chronicle">Chronicle</a>, an IDEO project by Derek Olson.
-  </p>
+<div class="row">
+  <div class="col s12 l6">
+    <h4>ABOUT THIS SITE</h4>
+      <p>
+        This site was developed using <a href="https://github.com/ideo/chronicle">Chronicle</a>, an IDEO project by Derek Olson.
+      </p>
+  </div>
 </div>

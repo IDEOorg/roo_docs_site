@@ -188,6 +188,10 @@
       createdb steps_admin_test
       sqitch deploy # in the root of the app
     </pre>
+    <h4 class="q">How do clients login?</h4>
+    <p>
+      They don't. They use a link sent to them by Roo. If they ever need the link, they can just send the word "plan" to Roo and it will send them the link. Fresh!
+    </p>
     <h4 class="q">How do I change a client's platform (Messenger &lt;-&gt; SMS)?</h4>
     <p>
       Find the client id in the database (using Postman, for example). Then create a PUT request and change the value of the "platform" value to the platform of your choice (FBOOK or SMS). Also change the value of "topic:" if switching to Messenger, set topic to "setupfb." Then ask the client to text START to the bot number to being. This will send a link to their phone via SMS that will take them to the bot on Messenger. If switching to SMS, value of "topic" should be "welcome." the client should text START to the number to begin. 
@@ -278,9 +282,17 @@
     <p>
       That's not a question, but you're in pain so we'll let it slide. You should look in you <span class="inline-code">.env</span> file and make sure <span class="inline-code">AUTH0_ENABLED</span> is set to <span class="inline-code">true</span>. Restart the app if you change it so that it takes effect. 
     </p>
-    <h4 class="q">What I get the error ”Cannot read property ‘words’ of undefined.</h4>
+    <h4 class="q">What if I get the error ”Cannot read property ‘words’ of undefined.</h4>
     <p> 
       This is an error thrown by <span class="inline-code">crypto.js</span>. It means you haven't provided a secret key (a custom string) to encrypt stuff with. Likely this is an environment variable that either lives in an <span class="inline-code">.env</span> file or is passed in via the terminal when you start your application/script. 
+    </p>
+    <h4 class="q">I'm getting an API error that says "Signing Key Not Found."</h4>
+    <p> 
+      This is an error thrown by Auth0. It means the auth token you are using in your request does not match the tenant it was made with. Make sure you're using a 'staging' token when talking to the staging server and the 'production' token for the production server (etc, etc).
+    </p>
+    <h4 class="q">What's a recurring task and how is it used?</h4>
+    <p> 
+      TL;DR they're not implemented yet. A recurring task is a task that happens in parallel to a regular one. They are not completable (cannot mark as "DONE") through the bot, and are active for 30 days by default. An example is "Track your spending on food for 1 month."
     </p>
     <h4 class="q">Don't see your question here?</h4>
     <p>Email us at <a href="mailto:roo@ideo.org">roo@ideo.org</a></p>

@@ -41,6 +41,10 @@ title: Tech FAQ
       createdb steps_admin_test
       sqitch deploy # in the root of the app
     </pre>
+    <h4 class="q">How do clients login?</h4>
+    <p>
+      They don't. They use a link sent to them by Roo. If they ever need the link, they can just send the word "plan" to Roo and it will send them the link. Fresh!
+    </p>
     <h4 class="q">How do I change a client's platform (Messenger <-> SMS)?</h4>
     <p>
       Find the client id in the database (using Postman, for example). Then create a PUT request and change the value of the "platform" value to the platform of your choice (FBOOK or SMS). Also change the value of "topic:" if switching to Messenger, set topic to "setupfb." Then ask the client to text START to the bot number to being. This will send a link to their phone via SMS that will take them to the bot on Messenger. If switching to SMS, value of "topic" should be "welcome." the client should text START to the number to begin. 
