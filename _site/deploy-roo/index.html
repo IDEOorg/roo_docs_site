@@ -226,25 +226,21 @@
     <h3>Setting up the Coach Application for Local Dev</h3>
     <ol>
       <li>Create a directory and clone the <a href="https://github.com/IDEOorg/steps">repo</a> into the directory.</li>
-      <li>Follow the instructions in the README for creating your database.
-        <ul>
+      <li>Follow the instructions in the README for creating your database.</li>
+        <ul style="margin: 0">
           <li>
             NOTE: Developing locally requires a postgres database with a user "postgres" that has a blank password. The steps in the README will demonstrate how to create the database, but you will need to make sure the "postgres" user exists, has access privelages, and no password before continuing. Example psql command = <span class="inline-code">CREATE ROLE postgres WITH SUPERUSER LOGIN;</span>
           </li>
         </ul>
-      </li>
-      <li>Follow the instructions in "Refresh with latest build" section of th the README to installing all necessary packages.</li>
+      <li>Follow the instructions in "Refresh with latest build" section of th the README to install all necessary packages.</li>
       <li>You will need the appropriate values for the <span class="inline-code">.env</span> file at the root of the project. Contact us at <a href="mailto:roo@ideo.org">roo@ideo.org</a> if you have questions regarding this step.</li>
       <li>Start the app. Make sure you are using a version of Node &gt;7.6.</li>
     </ol>
-    <br />
+    <p></p>
     <h3>Setting up the Bot Application</h3>
     <p>
-      Because the bot relies on Twilio and Facebook Messenger and neither of these services supports the use of <span class="inline-code">localhost</span>, you must deploy the bot code before you can test it. It's a bummer, we know.
+      Because the bot relies on Twilio and Facebook Messenger and neither of these services supports the use of <span class="inline-code">localhost</span>, you must deploy the bot code before you can test it. It's a bummer, we know. As a result, you will not need an <span class="inline-code">.env</span> file. Instead, add the values directly into into Heroku as config vars (or on whatever platform you're deploying to).
     </p>
-    <p>
-      You will note need an <span class="inline-code">.env</span> since you cannot dev locally with the bot. Instead add the values outlined in the README directly into your deployment configuration.</p>
-    &lt;/p&gt;
     <ol>
       <li>Create a directory and clone the <a href="https://github.com/IDEOorg/steps-bot">repo</a> into the directory.</li>
       <li>Add your <span class="inline-code">.env</span> values into Heroku or whatever platform you're using to deploy.</li>
@@ -256,7 +252,7 @@
 <div class="row">
   <div class="col l8">
     <h2>Important Notes</h2>
-    <h3>Creating coach accounts</h3>
+    <h3>Creating accounts (for coaches)</h3>
     <p>
       In order to create users, you must first create an organization in the database. To do this, you should submit a POST request to the database with the following body format:
     </p>
