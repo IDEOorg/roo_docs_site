@@ -77,6 +77,10 @@ title: IDEO.org
     <p>
       If you're signed into the Heroku CLI and have been added to the project in Heroku with the proper permissions, you can run a command like this: <span class="inline-code">heroku pg:psql --app steps-staging</span>. Easy peasy. Just switch out the name of the app to connect to another one. 
     </p>
+    <h4>How do we know if someone texted "STOP?"</h4>
+    <p>
+      STOP is a Twilio keyword and will result in Roo being blocked from sending messages to the user. The user can reverse this at anytime by texting START to Roo. For messages sent after mid-August, the "stop" message should show up in the client's chat log and an event should also be fired to Keen (through the method handleIfUserAskedToStop in Chatbot.js).
+    </p>
   </div>
 </div>
 

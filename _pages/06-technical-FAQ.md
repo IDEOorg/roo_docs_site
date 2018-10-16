@@ -147,6 +147,10 @@ title: Tech FAQ
     <p> 
       TL;DR they're not implemented yet. A recurring task is a task that happens in parallel to a regular one. They are not completable (cannot mark as "DONE") through the bot, and are active for 30 days by default. An example is "Track your spending on food for 1 month."
     </p>
+    <h4 class="q">What's a recurring task and how is it used?</h4>
+    <p> 
+      STOP is a Twilio keyword and will result in Roo being blocked from sending messages to the user. The user can reverse this at anytime by texting START to Roo. For messages sent after mid-August, the "stop" message should show up in the client's chat log and an event should also be fired to Keen (through the method handleIfUserAskedToStop in Chatbot.js).
+    </p>
     <h4 class="q">Don't see your question here?</h4>
     <p>Email us at <a href="mailto:roo@ideo.org">roo@ideo.org</a></p>
   </div>
