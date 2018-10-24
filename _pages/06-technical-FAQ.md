@@ -30,13 +30,17 @@ title: Tech FAQ
     <h4 class="q">How can I get a copy of my database on my local machine?</h4>
     <p>The following steps require use of a Heroku database and the Heroku CLI</p>
     <pre style="whitespace: pre-line">
-      # This first step is destructive locally. Make sure you don't have local data 
-      # you care about.
+      # This first step is destructive locally. Make sure you don't have local data you care about.
+      # The second step requires you to create the database with the postgres user account
       dropdb steps_admin_test
-      heroku pg:pull your.hosted.heroku.postgres.url postgres://localhost/steps_admin_test -a steps-admin
-      AUTH0_ENABLED=false npm start # in the api directory
-      ...
-      # Restore a non-production (empty) local db
+      createdb steps_admin_test
+      heroku pg:backups:capture --app steps-staging
+      heroku pg:backups:download --app steps-staging
+      pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d steps_admin_test latest.dump
+      refer to <a href="https://devcenter.heroku.com/articles/heroku-postgres-import-export" target="blank">https://devcenter.heroku.com/articles/heroku-postgres-import-export</a> for more details
+    </pre>
+    <p>Follow the steps below to restore a non-production (empty) local db</p>
+    <pre style="whitespace: pre-line">
       dropdb steps_admin_test
       createdb steps_admin_test
       sqitch deploy # in the root of the app
@@ -146,10 +150,6 @@ title: Tech FAQ
     <h4 class="q">What's a recurring task and how is it used?</h4>
     <p> 
       TL;DR they're not implemented yet. A recurring task is a task that happens in parallel to a regular one. They are not completable (cannot mark as "DONE") through the bot, and are active for 30 days by default. An example is "Track your spending on food for 1 month."
-    </p>
-    <h4 class="q">What's a recurring task and how is it used?</h4>
-    <p> 
-      STOP is a Twilio keyword and will result in Roo being blocked from sending messages to the user. The user can reverse this at anytime by texting START to Roo. For messages sent after mid-August, the "stop" message should show up in the client's chat log and an event should also be fired to Keen (through the method handleIfUserAskedToStop in Chatbot.js).
     </p>
     <h4 class="q">Don't see your question here?</h4>
     <p>Email us at <a href="mailto:roo@ideo.org">roo@ideo.org</a></p>
