@@ -30,8 +30,9 @@ title: Tech FAQ
     <h4 class="q">How can I get a copy of my database on my local machine?</h4>
     <p>The following steps require use of a Heroku database and the Heroku CLI</p>
     <pre style="whitespace: pre-line">
-      # This first step is destructive locally. Make sure you don't have local data you care about.
-      # The second step requires you to create the database with the postgres user account
+      # This `dropdb` step is destructive locally. Make sure you don't have local data you care about.
+      # The `create`db` step requires you to create the database with the postgres user account
+      # ! IMPORTANT ! before performing any of these steps, you will need to sign-in to heroku on the command line using the credentials found in 1Password.
       dropdb steps_admin_test
       createdb steps_admin_test
       heroku pg:backups:capture --app steps-staging
