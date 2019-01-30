@@ -76,7 +76,7 @@ title: Documents
         <h3 class="title-break">Sign-Up Flow Diagram</h3>
         <span><p style="font-style:italic">as of 08/29/2018. Click to view. Sign-up flow is a little confusing. Hopefully this helps clarify the process required for adding a client.</p></span>
         <div class="img-med">
-            <a href="https://cacoo.com/diagrams/lRvTZwoQYhctdgEj#04C2D" target="_blank">
+            <a href="https://cacoo.com/diagrams/lRvTZwoQYhctdgEj/04C2D" target="_blank">
                 <img src="{{page.root}}img/signup_flow_screenshot.png">
             </a>
         </div>
