@@ -88,9 +88,7 @@ title: Documents
         <h3 class="title-break">Help Flow Diagram</h3>
         <span><p style="font-style:italic">as of 08/29/2018. Click to view. The process of a client asking for help and the coach responding is not as straight-forward as most other processes. Here's a diagram to help clarify what's going on behind the scenes.</p></span>
         <div class="img-med">
-            <a href="https://cacoo.com/diagrams/sN9u5OvaDYerdci0#48966" target="_blank">
-                <img src="{{page.root}}img/help_flow_screenshot.png">
-            </a>
+            <img src="{{page.root}}img/Actual_Request_Response_Flow.png">
         </div>
     </div>
 </div>
