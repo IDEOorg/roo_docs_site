@@ -64,9 +64,9 @@ title: Documents
 <div class="row row-break">
     <div class="col l12">
         <h3 class="title-break">Database Schema</h3>
-        <span><p style="font-style:italic">as of 08/29/2018. More info available in the source code of the api application and in the <a src="/api/web-app">API section</a> of this website.</p></span>
+        <span><p style="font-style:italic">as of 02/12/2019 (mm/dd/yyyy). More info available in the source code of the api application and in the <a src="/api/web-app">API section</a> of this website.</p></span>
         <div class="img-med">
-            <img src="{{page.root}}img/steps_db_schema.png">
+            <img src="{{page.root}}img/steps_db_schema.svg">
         </div>
     </div>
 </div>
