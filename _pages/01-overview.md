@@ -40,47 +40,29 @@ title: Overview
       <div class="li-flex">
         <img src="{{page.root}}img/1.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
-          Check out <a href="https://www.youtube.com/watch?v=Y9ln8yNiF8I" target="_blank">this introduction </a> to Roo. It gives a good foundation to the thinking behind Roo's design. 
+          Check out <a href="https://www.youtube.com/edit?o=U&video_id=G8KtBFg6mRw" target="_blank">this introduction </a> to Roo. It gives a good foundation to the thinking behind Roo's design. 
         </li>
       </div>
       <div class="li-flex">
         <img src="{{page.root}}img/2.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
-          Watch the <a href="https://www.youtube.com/watch?v=AQILZJgNos8" target="_blank">Roo demo video</a> to see our platform in action and know what you can expect. 
+          Take a tour of the documents in the <a href="/documents">Diagrams and Flows</a> section. These will be valuable resources as you implement Roo and build an understanding of how it works. 
         </li>
       </div>
       <div class="li-flex">
         <img src="{{page.root}}img/3.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
-          Familiarize yourself with our roadmap (<a href="/roadmap/phase-one">phase one</a> and <a href="/roadmap/phase-two">phase two</a>) so you know what's coming up over the next few months. 
+          Dive into the instructions for <a href="/deploy-roo">deploying Roo</a>. 
         </li>
       </div>
       <div class="li-flex">
         <img src="{{page.root}}img/4.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
-          Take a tour of the documents in the <a href="/documents">Diagrams and Flows</a> section. These will be valuable resources as you implement Roo and build an understanding of how it works. 
-        </li>
-      </div>
-      <div class="li-flex">
-        <img src="{{page.root}}img/5.png" class="bullets" />
-        <li class="li-self" style="list-style-type: none; ">
-          Dive into the instructions for <a href="/deploy-roo">deploying Roo</a>. 
-        </li>
-      </div>
-      <div class="li-flex">
-        <img src="{{page.root}}img/6.png" class="bullets" />
-        <li class="li-self" style="list-style-type: none; ">
           Read our <a href="/technical-faq">technical FAQs</a> when you get stuck. 
         </li>
       </div>
       <div class="li-flex">
-        <img src="{{page.root}}img/7.png" class="bullets" />
-        <li class="li-self" style="list-style-type: none; ">
-          Set your users up for success by directing them to our <a href="/current-users">training videos</a>.
-        </li>
-      </div>
-      <div class="li-flex">
-        <img src="{{page.root}}img/8.png" class="bullets" />
+        <img src="{{page.root}}img/5.png" class="bullets" />
         <li class="li-self" style="list-style-type: none; ">
           Want the full pitch on Roo and how we got this crazy idea? <a href="https://drive.google.com/file/d/1yfqaEh8yw9y0kjo1qP5AAIQ6SzeZnoQi/view?usp=sharing">Roo Presentation - Prosperity Now Summit, 09/2018</a>.
         </li>

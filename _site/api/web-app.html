@@ -61,27 +61,6 @@
     
     <li class="">
       
-        <a class="collapsible-header waves-effect ">Roadmap</a>
-        <ul class="collapsible-body ">
-          
-            <li class="" >
-                <a href="/roadmap/phase-one/">Phase One</a>
-            </li>
-          
-            <li class="" >
-                <a href="/roadmap/phase-two">Phase Two</a>
-            </li>
-          
-        </ul>
-      
-    </li>
-  
-    
-    
-    
-    
-    <li class="">
-      
         <a class="collapsible-header waves-effect ">Using Roo</a>
         <ul class="collapsible-body ">
           
@@ -153,16 +132,27 @@
   <div class="page-content">
     <div class="row">
   <div class="col l12 controller">
-    <h2>Routes</h2>
+    <p>Updated April 30, 2019</p>
     <p class="font-style: italic">For implementation details, refer to <span class="inline-code">src/controller</span> and <span class="inline-code">src/repository</span> directories within the <span class="inline-code">api</span> source code.</p>
   </div>
+</div>
+<div class="row">
   <div class="col l12 controller">
     <h3 class="highlight-title">Client Controller</h3>
     <h4 class="title-break">GET /api/clients</h4>
     <p>Returns all existing clients as an array of <span class="inline-code">user</span> objects.</p>
     <span></span> <!-- here just to page the page more readable in IDE -->
+    <h4 class="title-break">POST /api/clients</h4>
+    <p>Creates a <span class="inline-code">user</span> whose type value is set to "Client".</p>
+    <span></span>
     <h4 class="title-break">GET /api/clients/:id</h4>
     <p>Returns a single <span class="inline-code">user</span> object.</p>
+    <span></span>
+    <h4 class="title-break">PUT /api/clients/:id</h4>
+    <p>Updates a <span class="inline-code">user</span> whose type is "Client" and whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
+    <span></span>
+    <h4 class="title-break">DELETE /api/clients/:id</h4>
+    <p>Deletes a <span class="inline-code">user</span> whose type is "Client". May require SUPER_ADMIN access. Alternatively, users can be deleted using the <span class="inline-code">deleteuser.js</span> script, which can be found in the root of the <span class="inline-code">steps-bot</span> code source. Deleting a <span class="inline-code">user</span> requires that all records associated with that <span class="inline-code">user</span> must first be deleted (tasks, viewed_media, etc).</p>
     <span></span>
     <h4 class="title-break">GET /api/clients/:id/tasks</h4>
     <p>Returns an array of <span class="inline-code">task</span> objects associated with a single <span class="inline-code">user</span>.</p>
@@ -182,45 +172,74 @@
     <h4 class="title-break">DELETE /api/clients/:id/viewed_media/:media_id</h4>
     <p>Deletes a <span class="inline-code">viewed_media</span> object associated with a specific <span class="inline-code">user</span>.</p>
     <span></span>
-    <h4 class="title-break">POST /api/clients</h4>
-    <p>Creates a <span class="inline-code">user</span> whose type value is set to "Client".</p>
+    <h4 class="title-break">GET /api/clients/active/:admin_id</h4>
+    <p>Returns an array of <span class="inline-code">User</span> objects associated with an organization using a single administrator's id.
     <span></span>
-    <h4 class="title-break">PUT /api/clients/:id</h4>
-    <p>Updates a <span class="inline-code">user</span> whose type is "Client" and whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
-    <span></span>
-    <h4 class="title-break">DELETE /api/clients/:id</h4>
-    <p>Deletes a <span class="inline-code">user</span> whose type is "Client". May require SUPER_ADMIN access. Alternatively, users can be deleted using the <span class="inline-code">deleteuser.js</span> script, which can be found in the root of the <span class="inline-code">steps-bot</span> code source. Deleting a <span class="inline-code">user</span> requires that all records associated with that <span class="inline-code">user</span> must first be deleted (tasks, viewed_media, etc).</p>
-  </div>
+  &lt;/div&gt;
+&lt;/div&gt;
+<div class="row">
   <div class="col l12 controller">
     <h3 class="highlight-title">Coach Controller</h3>
     <h4 class="title-break">GET /api/coaches</h4>
     <p>Returns array of <span class="inline-code">user</span> objects whose type is "Coach."</p>
     <span></span>
-    <h4 class="title-break">GET /api/coaches/:id</h4>
-    <p>Returns a single <span class="inline-code">user</span> object whose type is "Coach" and whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
-    <span></span>
     <h4 class="title-break">POST /api/coaches</h4>
     <p>Creates a <span class="inline-code">user</span> object with the type value of "Coach."</p>
     <span></span>
-    <h4 class="title-break">DELETE /api/coaches/:id</h4>
+    <h4 class="title-break">GET /api/coaches/:id</h4>
+    <p>Returns a single <span class="inline-code">user</span> object whose type is "Coach" and whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
+    <span></span>
+    <h4 class="title-break">PUT /api/coaches/:id</h4>
+    <p>Edits a single <span class="inline-code">user</span> object whose type is "Coach" and whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
+    <span></span>
+     <h4 class="title-break">DELETE /api/coaches/:id</h4>
     <p>Deletes a <span class="inline-code">user</span> object with type "Coach" and whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
+    <span></span>
+    <h4 class="title-break">GET /api/coaches/:id/clients</h4>
+    <p>Returns an array of <span class="inline-code">user</span> objects whose type is "Client" and whose <span class="inline-code">coach_id</span> matches the ":id" parameter.</p>
+    <span></span>
+    <h4 class="title-break">POST /api/coaches/invites</h4>
+    <p>Creates one or more <span class="inline-code">Invite</span> objects.</p>
+    <span></span>
+    <h4 class="title-break">PUT /api/coaches/invites/:email</h4>
+    <p>Modifies a single <span class="inline-code">Invite</span> matching the parameter <span class="inline-code">:email</span></p>
+    <span></span>
+    <h4 class="title-break">DELETE /api/coaches/invites/:email</h4>
+    <p>Delets a single <span class="inline-code">Invite</span> object matching the parameter <span class="inline-code">:email</span></p>
+    <span></span>
+    <h4 class="title-break">PUT /api/coaches/:id/favorites</h4>
+    <p>Returns a list of <span class="inline-code">Task</span> objects favorited by a coach with an id matchin the <span class="inline-code">:id</span>parameter. Favorites are stored on the <span class="inline-code">User</span> objects.</p>
+    <span></span>
+  </div>
+</div>
+<div class="row">
+  <div class="col l12 controller">
+    <h3 class="highlight-title">Admin Controller</h3>
+    <h4 class="title-break">PUT /api/admin/:id</h4>
+    <p>Modifies a <span class="inline-code">user</span> of type "Admin."</p> matching the parameter <span class="inline-code">:id</span>.
+    <span></span>
+  </div>
+</div>
+<div class="row">
+  <div class="col l12 controller">
+    <h3 class="highlight-title">User Controller</h3>
     <h4 class="title-break">GET /api/users</h4>
     <p>Returns an array of all <span class="inline-code">user</span> objects.</p>
-    <span></span>
-    <h4 class="title-break">GET /api/users/:id</h4>
-    <p>Returns a <span class="inline-code">user</span> object whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
     <span></span>
     <h4 class="title-break">POST /api/users</h4>
     <p>Creates a <span class="inline-code">user</span>.</p>
     <span></span>
+    <h4 class="title-break">GET /api/users/:id</h4>
+    <p>Returns a <span class="inline-code">user</span> object whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
+    <span></span>
     <h4 class="title-break">DELETE /api/users/:id</h4>
     <p>Deletes a <span class="inline-code">user</span> whose <span class="inline-code">id</span> matches the ":id" parameter. Will return an error if the user has values that are relations to other tables. For example, a user cannot be deleted if their id is a foreign key on a task. All tasks, viewed_media, etc. must be deleted before the user can be deleted. You can use the <span class="inline-code">deleteuser.js</span> script to assist with this process. It can be found in the root of the steps-bot source code.</p>
+    <span></span>
   </div>
+</div>
+<div class="row">
   <div class="col l12 controller">
     <h3 class="highlight-title">Org Controller</h3>
-    <span></span>
-    <h4 class="title-break">GET /api/orgs</h4>
-    <p>Returns an array of <span class="inline-code">org</span> objects.</p>
     <span></span>
     <h4 class="title-break">GET /api/orgs</h4>
     <p>Returns an array of <span class="inline-code">org</span> objects.</p>
@@ -228,17 +247,19 @@
     <h4 class="title-break">POST /api/orgs</h4>
     <p>Creates a new <span class="inline-code">org</span>.</p>
     <span></span>
+    <h4 class="title-break">PUT /api/orgs/:id</h4>
+    <p>Modifies an existing <span class="inline-code">org</span> whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
+    <span></span>
     <h4 class="title-break">DELETE /api/orgs/:id</h4>
     <p>Deletes an <span class="inline-code">org</span> whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
   </div>
+</div>
+<div class="row">
   <div class="col l12 controller">
     <h3 class="highlight-title">Task Controller</h3>
     <span></span>
     <h4 class="title-break">GET /api/tasks</h4>
     <p>Returns an array of <span class="inline-code">task</span> objects.</p>
-    <span></span>
-    <h4 class="title-break">GET /api/tasks/:id</h4>
-    <p>Returns a <span class="inline-code">task</span> object whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
     <span></span>
     <h4 class="title-break">POST /api/tasks</h4>
     <p>Creates a <span class="inline-code">task</span>.</p>
@@ -246,61 +267,84 @@
     <h4 class="title-break">PUT /api/tasks</h4>
     <p>Updates many <span class="inline-code">task</span> records.</p>
     <span></span>
-    <h4 class="title-break">DELETE /api/tasks/:id</h4>
-    <p>Deletes a <span class="inline-code">task</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
+    <h4 class="title-break">GET /api/tasks/:id</h4>
+    <p>Returns a <span class="inline-code">task</span> object whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
     <span></span>
     <h4 class="title-break">PUT /api/tasks/:id</h4>
     <p>Updates a <span class="inline-code">task</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
+    <span></span>
+    <h4 class="title-break">DELETE /api/tasks/:id</h4>
+    <p>Deletes a <span class="inline-code">task</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
+    <span></span>
+    <h4 class="title-break">PUT /api/tasks/:id/share</h4>
+    <p>Modifies a <span class="inline-code">task</span> whose <span class="inline-code">id</span> mathches the ":id" parameter to be shared.</p>
+    <span></span>
   </div>
+</div>
+<div class="row">
   <div class="col l12 controller">
     <h3 class="highlight-title">Message Controller</h3>
     <span></span>
     <h4 class="title-break">GET /api/messages</h4>
     <p>Returns an array of <span class="inline-code">message</span> objects.</p>
     <span></span>
+    <h4 class="title-break">POST /api/messages</h4>
+    <p>Creates a <span class="inline-code">message</span> record.</p>
+    <span></span>
     <h4 class="title-break">GET /api/messages/:id</h4>
     <p>Returns a <span class="inline-code">message</span> object whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
     <span></span>
-    <h4 class="title-break">POST /api/messages</h4>
-    <p>Creates a <span class="inline-code">message</span> record.</p>
+    <h4 class="title-break">PUT /api/messages/:id</h4>
+    <p>Modifies a <span class="inline-code">message</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
     <span></span>
     <h4 class="title-break">DELETE /api/messages/:id</h4>
     <p>Deletes a <span class="inline-code">message</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
   </div>
+</div>
+<div class="row">
   <div class="col l12 controller">
     <h3 class="highlight-title">Media Controller</h3>
     <span></span>
     <h4 class="title-break">GET /api/media</h4>
     <p>Returns an array of <span class="inline-code">media</span> objects.</p>
     <span></span>
+    <h4 class="title-break">POST /api/media</h4>
+    <p>Creates a <span class="inline-code">media</span> record.</p>
+    <span></span>
     <h4 class="title-break">GET /api/media/:id</h4>
     <p>Returns a <span class="inline-code">media</span> object whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
     <span></span>
-    <h4 class="title-break">POST /api/media</h4>
-    <p>Creates a <span class="inline-code">media</span> record.</p>
+    <h4 class="title-break">PUT /api/media/:id</h4>
+    <p>Modifies a <span class="inline-code">media</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
     <span></span>
     <h4 class="title-break">DELETE /api/media/:id</h4>
     <p>Deletes a <span class="inline-code">media</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
   </div>
+</div>
+<div class="row">
   <div class="col l12 controller">
-    <h3 class="highlight-title">Request Controller</h3>
+    <h3 class="highlight-title">Request Controller&lt; - DEPRECATED/h3&gt;
     <span></span>
     <h4 class="title-break">GET /api/requests</h4>
     <p>Returns an array of <span class="inline-code">request</span> objects. A <span class="inline-code">request</span> can have many associated <span class="inline-code">messages</span>, each with <span class="inline-code">id</span> of the <span class="inline-code">request</span> as a foreign key value.</p>
-     <span></span>
+    <span></span>
+    <h4 class="title-break">POST /api/requests</h4>
+    <p>Creates a <span class="inline-code">request</span> record.</p>
+    <span></span>
     <h4 class="title-break">GET /api/requests/:id</h4>
     <p>Returns a <span class="inline-code">request</span> object whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
     <span></span>
     <h4 class="title-break">PUT /api/requests/:id</h4>
     <p>Updates a <span class="inline-code">requests</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
     <span></span>
-    <h4 class="title-break">POST /api/requests</h4>
-    <p>Creates a <span class="inline-code">request</span> record.</p>
-    <span></span>
     <h4 class="title-break">DELETE /api/requests/:id</h4>
     <p>Deletes a <span class="inline-code">request</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
-  </div>
-</div>
+    <h4 class="title-break">GET /api/coach/requests/:id</h4>
+    <p>Returns a list of open <span class="inline-code">request</span> objects associated with a <span class="inline-code">user</span> of type "Coach" whose <span class="inline-code">id</span> matches the parameter <span class="inline-code">:id</span>.</p>
+    <span></span>
+  &lt;/div&gt;
+&lt;/div&gt;
+
 
 <div class="row">
   <div class="col l12 controller">
@@ -457,6 +501,7 @@
     </pre>
   </div>
 </div>
+
 
 <!--- TASK -->
 <div class="row">
@@ -722,6 +767,7 @@
     </pre>
   </div>
 </div>
+</h3></div></div></p></div></div>
 
   </div>
 

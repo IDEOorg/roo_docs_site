@@ -14,6 +14,15 @@ title: Documents
     }
 </style>
 
+<div class="row row-break">
+    <div class="col l12">
+        <h3 class="title-break">Theory of Change Diagram</h3>
+        <span><p style="font-style:italic">Updated 04/19. A visual representation of what we want to achieve in terms of impact with Roo.</p></span>
+        <div class="img-med">
+            <img src="{{page.root}}img/Roo_ToC_diagram.jpg">
+        </div>
+    </div>
+</div>
 
 <div class="row row-break">
     <div class="col l12">
@@ -28,10 +37,22 @@ title: Documents
 <div class="row row-break">
     <div class="col l12">
         <h3 class="title-break">Tech Flow Outline</h3>
-        <span><p style="font-style:italic">as of 08/29/2018. Google Sheets doc. Click to view. This is a step-by-step walkthrough of what the bot does at each phase of a conversation with a user. It includes references to source code locations. This is the best resource for understanding the interaction flow between bot and user.</p></span>
+        <span><p style="font-style:italic">Updated 04/19. Google Sheets doc. Click to view. This is a step-by-step walkthrough of what the bot does at each phase of a conversation with a user. It includes references to source code locations. This is the best resource for understanding the interaction flow between bot and user.</p></span>
         <div class="img-med">
             <a href="https://docs.google.com/spreadsheets/d/102S6UAdZp3VDgVhztJtvkCP1UGcSu3YeuyFmMtxNaQo/edit?usp=sharing" target="_blank">
-                <img src="{{page.root}}img/tech_flow_screenshot.png">
+                <img src="{{page.root}}img/new_tech_flow.png">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row row-break">
+    <div class="col l12">
+        <h3 class="title-break">User Onboarding Journeys</h3>
+        <span><p style="font-style:italic">Updated 04/19. Google Sheets doc. Click to view. This is a step-by-step walkthrough of what different users must do to sign-up for Roo and begin using it.</p></span>
+        <div class="img-med">
+            <a href="https://docs.google.com/spreadsheets/d/18xFOubwyGgjte9Rwe949Xt8cvSgrirLH4poPAdqo8Js/edit?usp=sharing" target="_blank">
+                <img src="{{page.root}}img/onboarding.png">
             </a>
         </div>
     </div>
@@ -77,18 +98,8 @@ title: Documents
         <span><p style="font-style:italic">as of 08/29/2018. Click to view. Sign-up flow is a little confusing. Hopefully this helps clarify the process required for adding a client.</p></span>
         <div class="img-med">
             <a href="https://cacoo.com/diagrams/lRvTZwoQYhctdgEj/04C2D" target="_blank">
-                <img src="{{page.root}}img/signup_flow_screenshot.png">
+                <img src="{{page.root}}img/new_sign_up.png">
             </a>
-        </div>
-    </div>
-</div>
-
-<div class="row row-break">
-    <div class="col l12">
-        <h3 class="title-break">Help Flow Diagram</h3>
-        <span><p style="font-style:italic">as of 08/29/2018. Click to view. The process of a client asking for help and the coach responding is not as straight-forward as most other processes. Here's a diagram to help clarify what's going on behind the scenes.</p></span>
-        <div class="img-med">
-            <img src="{{page.root}}img/Actual_Request_Response_Flow.png">
         </div>
     </div>
 </div>

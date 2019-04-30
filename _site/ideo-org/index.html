@@ -61,27 +61,6 @@
     
     <li class="">
       
-        <a class="collapsible-header waves-effect ">Roadmap</a>
-        <ul class="collapsible-body ">
-          
-            <li class="" >
-                <a href="/roadmap/phase-one/">Phase One</a>
-            </li>
-          
-            <li class="" >
-                <a href="/roadmap/phase-two">Phase Two</a>
-            </li>
-          
-        </ul>
-      
-    </li>
-  
-    
-    
-    
-    
-    <li class="">
-      
         <a class="collapsible-header waves-effect ">Using Roo</a>
         <ul class="collapsible-body ">
           
@@ -162,29 +141,31 @@
     <h2>Looking for something?</h2>
     <h4>ACCOUNT PASSWORDS</h4>
     <p>These can be found in 1Password and should include "Steps Dev" in the title.</p>
-    <h4>TWILIO NUMBERS WE OWN/USE</h4>
-    <p>Look in 1Password</p>
+    <p>There is also a separate vault called "Dev Partner" with additional login details as well as <span class="inline-code">.env</span> files
     <h4>ENV VARS</h4>
     <p>
-      Original copies are stored in 1Password, and the most up to date values can be found in heroku. Heroku config vars can also be seen if you're signed into an authorized heroku account via the CLI by running 'heroku config'.
+      Original copies are stored in 1Password (see "Dev Partner" vault), and the most up to date values can be found in heroku. Heroku config vars can also be seen if you're signed into an authorized heroku account via the CLI by running 'heroku config'.
     </p>
     <h4>HOSTING/DNS</h4>
     <p>"helloroo.org" was registered with domains.google.com using the Google account for "steps.developers@gmail.com." We are using <a href="https://dnsimple">DNS Simple</a> to manage DNS records.</p>
-    <p>This site is hosted on Amazon AWS using the "accounts@ideo.org" credentials. The bucket name is "roo-docs-site."</p>
-    <p>^ CHANGE  THIS IF WE GO WITH THE NETLIFY DEPLOYMENT</p>
+    <p>This site is hosted on Netlify (login details in IDEO.org shared vault in 1Password)</p>
     <h4>STATIC ASSETS</h4>
     <p>Images for Media objects and other static assets are stored in an AWS S3 bucket in the "accounts@ideo.org" account. The bucket name is "steps-application-public."</p>
     <h4>OTHER DOCS</h4>
+      There is a folder of important documents related to this project. Sommai knows where it is. It contains things like:
       <ul>
-        <li>
-          <a href="https://drive.google.com/file/d/1yPq2xLPYSEOrjSDAR8XxCby0sPlJCJow/view?usp=sharing" target="_blank">Theory of change diagram</a>
-        </li>
+        <li>Theory of Change</li>
+        <li>Budget projections</li>
+        <li>Internal operational plans for beta launch</li>
+        <li>Video project files</li>
+        <li>Branding guide</li>
+        <li>etc...</li>
       </ul>
-    <h4>CONTACTS</h4> 
-    <p><span class="bold">IDEO.org</span> - lead dev is Matthew Epler (mepler@ideo.org or matthewepler@gmail.com) if you can't find something or have further questions.</p>
-    <p><span class="bold">8th Light</span> - our developer for summer of 2018. Created the coach application and database. Principles were Jim Remsik (jremsik@8thlight.com) and Connor Mendenhall (cmendenhall@8thlight.com).</p>
-  </div>
-</div>
+    <h4>CONTACT</h4> 
+    <p><span class="bold">IDEO.org</span>: roo@ideo.org</p>
+    
+  &lt;/div&gt;
+&lt;/div&gt;
 
 <div class="row">
   <div class="col s12 l8">
@@ -218,15 +199,11 @@
     <p>
     <h4>Info about Access Tokens</h4>
     <p>
-      Every 100 days, the access tokens need renewing. The current access tokens are in a file in 1Password with the title "Steps Auth Tokens." For instructions on how to get a new token, see the screenshots in the Admin repo. 
+      Every 100 days, the access tokens need renewing. This is done automatically within the app.
     </p>
     <h4>How can I connect directly to the heroku database from the command line?</h4>
     <p>
       If you're signed into the Heroku CLI and have been added to the project in Heroku with the proper permissions, you can run a command like this: <span class="inline-code">heroku pg:psql --app steps-staging</span>. Easy peasy. Just switch out the name of the app to connect to another one. 
-    </p>
-    <h4>How do we know if someone texted "STOP?"</h4>
-    <p>
-      STOP is a Twilio keyword and will result in Roo being blocked from sending messages to the user. The user can reverse this at anytime by texting START to Roo. For messages sent after mid-August, the "stop" message should show up in the client's chat log and an event should also be fired to Keen (through the method handleIfUserAskedToStop in Chatbot.js).
     </p>
   &lt;/div&gt;
 &lt;/div&gt;
@@ -239,7 +216,7 @@
       </p>
   </div>
 </div>
-</p></p></div></div>
+</p></p></div></div></p></div></div>
 
   </div>
 

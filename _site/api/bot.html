@@ -61,27 +61,6 @@
     
     <li class="">
       
-        <a class="collapsible-header waves-effect ">Roadmap</a>
-        <ul class="collapsible-body ">
-          
-            <li class="" >
-                <a href="/roadmap/phase-one/">Phase One</a>
-            </li>
-          
-            <li class="" >
-                <a href="/roadmap/phase-two">Phase Two</a>
-            </li>
-          
-        </ul>
-      
-    </li>
-  
-    
-    
-    
-    
-    <li class="">
-      
         <a class="collapsible-header waves-effect ">Using Roo</a>
         <ul class="collapsible-body ">
           
@@ -153,7 +132,7 @@
   <div class="page-content">
     <div class="row">
   <div class="col l12 controller">
-    <h2>Routes</h2>
+    <p>Updated April 30, 2019</p>
     <p class="font-style: italic">For implementation details, refer to <span class="inline-code">server.js</span> and <span class="inline-code">index.js</span> in the root directory of the <span class="inline-code">steps-bot</span> source code.</p>
   </div>
   <div class="col l12 controller">
@@ -168,7 +147,9 @@
   <div class="col l12 controller">
     <h3 class="highlight-title">Twilio</h3>
     <h4 class="title-break">POST /sms/receive</h4>
-    <p>A webhood for incoming messages to Twilio. For implementation, see <span class="inline-code">twilioController.hears()</span> in <span class="inline-code">index.js</span> located in the root directory of the <span class="inline-code">steps-bot</span> code.</p>
+    <p>A webhook for incoming messages to Twilio. For implementation, see <span class="inline-code">twilioController.hears()</span> in <span class="inline-code">index.js</span> located in the root directory of the <span class="inline-code">steps-bot</span> code.</p>
+    <h4 class="title-break">POST /sms/test</h4>
+    <p>Sends a test message to a number designated in the <span class="inline-code">env</span> vars.</p>
     <span></span> <!-- here just to page the page more readable in IDE -->
   </div>
   <div class="col l12 controller">

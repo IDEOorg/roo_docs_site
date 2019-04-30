@@ -100,31 +100,3 @@ title: Deploy Roo
     </ol>
   </div>
 </div>
-
-<div class="row">
-  <div class="col l8">
-    <h2>Important Notes</h2>
-    <h3>Creating accounts (for coaches)</h3>
-    <p>
-      In order to create users, you must first create an organization in the database. To do this, you should submit a POST request to the database with the following body format:
-    </p>
-    <pre>
-      {
-      "name": "Org Name",
-      "sms_number": "+15555555555",
-      "logo": "https://you.com/logo.png",
-      "phone": "+14444444444"
-      }     
-    </pre>
-    <p>
-      Note the id number of the org in the response body. Then go to the signup url: <span class="inline-code">https://your-app.com/signup/org_id</span>, and replace the "org_id" with the id number in the server response from the POST request. By using this link, any number of coaches can sign themselves up. Then they can login at <span class="inline-code">https://your-app.com</span> normally and create clients, etc. 
-    </p>
-  </div>
-</div>
-
-
-<!--
-Creating an org manually
-Populating database with template tasks
-Adding media to the database
--->
