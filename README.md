@@ -4,6 +4,8 @@
 
 This site serves as the central repository for technical documentation of the Roo platform, built by IDEO.org in 2018. It is hosted using Github pages.
 
+[Here is a video](https://youtu.be/8pU9TgC0ZP8) that shows how to work with this repo locally and deploy to the live site.
+
 ## How to build project
 
 This documentation website uses the static site builder [Jekyll](https://jekyllrb.com) to generate the various pages. It merges the markdown files found in the `_pages` directory with the html templates and partials found in the `_layouts` and `_includes` folders.
