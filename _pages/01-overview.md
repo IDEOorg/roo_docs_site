@@ -32,7 +32,7 @@ title: Overview
 <div class="row"> 
   <div class="col s12 l8">
     <img src="{{page.root}}img/roo_party.gif"  style="width: 125px"/>
-    <h3>Welcome, Poop mongers!</h3>
+    <h3>Welcome, Developers!</h3>
     <p>This purpose of this site is to help you get started using Roo at your own organization. There's a lot of moving parts but we've done our best to make it a smooth implementation. <a href="mailto:roo@ideo.org">Contact us</a> if you have any questions along the way and we'll do our best to help!</p>
     <h3>Recommendations</h3>
     <p>While not required, we recommend taking the following steps in order. This will give you a big-picture view of what Roo is for as well as all the technical details of how it's built. It also includes instructions on how to deploy Roo to the hosting service of your choice. Of course, you can feel free to browse the site's contents using the nav on the left at anytime.</p>
