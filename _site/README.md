@@ -9,14 +9,14 @@ This site serves as the central repository for technical documentation of the Ro
 This documentation website uses the static site builder [Jekyll](https://jekyllrb.com) to generate the various pages. It merges the markdown files found in the `_pages` directory with the html templates and partials found in the `_layouts` and `_includes` folders.
 
 #### Ruby
-To install the development environment, a bundle file has been included. Make sure you have **ruby 2.2+** installed. The easiest method to install ruby is to use [homebrew](https://brew.sh/) and then issue `brew install ruby`. Alternatively, you can use [RVM](https://rvm.io/) to maintain your ruby installations.
+To install the development environment, a bundle file has been included. Make sure you have **ruby 2.2+** installed. Using 2.6.3 is known to work as of this writing. The easiest method to install ruby is to use [homebrew](https://brew.sh/) and then issue `brew install ruby`. Alternatively, you can use [RVM](https://rvm.io/) to maintain your ruby installations.
 
 Then issue these commands to get up and running:
 
 - `gem install bundler` - Install bundler
 - `cd [project directory]`
 - `bundle install` - Install project dependencies
-- `jekyll liveserve` - Start dev server with livereload 
+- `bundle exec jekyll liveserve` - Start dev server with livereload 
 
 The development server should then be running at `http://localhost:4000`
 
