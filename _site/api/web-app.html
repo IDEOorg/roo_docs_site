@@ -319,10 +319,11 @@
   </div>
 </div>
 
+
 <div class="row">
   <div class="col l12 controller">
     <h2>Data Shapes</h2>
-    <p>For implementation details, refer to <span class="inline-code">src/sequelize/migrations</span> within the api source code.</p>
+    <p>For implementation details, refer to <span class="inline-code">src/migration/deploy</span> within the api source code.</p>
   </div>
 </div>
 
@@ -330,6 +331,7 @@
 <div class="row">
   <div class="col l12 controller">
     <h3 class="highlight-title">org </h3>
+    <p style="color: darkred">NOTE: orgs are currently created manually</p>
     <h4>Schema</h4>
     <div class="schema-div"> 
       <p class="schema-line">
@@ -342,43 +344,7 @@
         <span class="schema-key">sms_number</span>:  <span class="schema-string">text NOT NULL</span>; <span class="schema-comment">// must fit the format "+15555555555"</span>
       </p>
       <p class="schema-line">
-        <span class="schema-key">logo</span>: <span class="schema-string">text</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">created_at</span>: <span class="schema-date">timestamptz</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">updated_at</span>: <span class="schema-date">timestamptz</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">phone</span>: <span class="schema-string">text</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">city</span>: <span class="schema-string">text</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">state</span>: <span class="schema-string">text</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">country</span>: <span class="schema-string">text</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">postal_code</span>: <span class="schema-string">text</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">street</span>: <span class="schema-string">text</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">platforms</span>: <span class="schema-string">text</span>; <span class="schema-comment">// [SMS, FBOOK or BOTH]</span>
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">account_sid</span>: <span class="schema-string">text</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">auth_token</span>: <span class="schema-string">text</span>;
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">twilio_number</span>: <span class="schema-string">text</span>;
+        <span class="schema-key">logo</span>: <span class="schema-string">string</span>;
       </p>
     </div>
     <h4>Example</h4>
@@ -391,6 +357,8 @@
           "logo": "https://url_to_logo.png"
         }
       </code>
+      <code>psql=# INSERT INTO org (name, sms_number) VALUES ('ACME.org', '+15555555555');</code>
+      <code>psql=# INSERT INTO org (name, sms_number, logo) VALUES ('ACME.org', '+15555555555', 'https://s3...');</code>
     </pre>
   </div> 
 </div>
@@ -467,18 +435,21 @@
       <p class="schema-line">
         <span class="schema-key">auth0_id</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
       </p>
-      <p class="schema-line">
-        <span class="schema-key">sessions</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
+            <p class="schema-line">
+        <span class="schema-key">favorites</span>: <span class="schema-string">JSON[]</span>; <span class="schema-comment">// DEFAULT NULL::JSON[]</span>
       </p>
       <p class="schema-line">
-        <span class="schema-key">active</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
+        <span class="schema-key">sessions</span>: <span class="schema-string">JSON[]</span>; <span class="schema-comment">// DEFAULT '{}'::JSON[]</span>
       </p>
       <p class="schema-line">
-        <span class="schema-key">is_first_login</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
+        <span class="schema-key">is_first_login</span>: <span class="schema-boolean">boolean</span>; <span class="schema-comment">// DEFAULT NULL:: boolean</span>
       </p>
       <p class="schema-line">
-        <span class="schema-key">coach_history</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
+        <span class="schema-key">active</span>: <span class="schema-boolean">boolean</span>; <span class="schema-comment">// DEFAULT TRUE:: boolean</span>
       </p>
+      <p class="schema-line">
+        <span class="schema-key">coach_history</span>: <span class="schema-json">JSON[]</span>; <span class="schema-comment">// DEFAULT NULL::JSON[]</span>
+        </p>
     </div>
     <h4>Example</h4>
     <pre>
@@ -513,7 +484,12 @@
           "topic": "introtask",
           "fb_id": null, 
           "temp_help_response": null,
-          "auth0_id": null
+          "auth0_id": null,
+          "is_first_login": null,
+          "active": true,
+          "favorites": null,
+          "coach_history": null,
+          "sessions": []
       }
       </code>
     </pre>
@@ -688,9 +664,6 @@
         <span class="schema-key">timestamp</span>: <span class="schema-date">timestamptz</span>; <span class="schema-comment">// DEFAULT current time, NOT NULL</span>
       </p>
       <p class="schema-line">
-        <span class="schema-key">request_id</span>: <span class="schema-json">JSON[]</span>; 
-      </p>
-      <p class="schema-line">
         <span class="schema-key">topic</span>: <span class="schema-json">text</span>;
       </p>
     </div>
@@ -741,7 +714,7 @@
   </div>
 </div>
 
-</h3></div></div></p></div></div>
+</p></div></div>
 
   </div>
 

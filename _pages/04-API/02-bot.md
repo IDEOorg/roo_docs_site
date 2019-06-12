@@ -26,12 +26,7 @@ title: Bot API
     <p>Sends a test message to a number designated in the <span class="inline-code">env</span> vars.</p>
     <span></span> <!-- here just to page the page more readable in IDE -->
   </div>
-  <div class="col l12 controller">
-    <h3 class="highlight-title">Help Request/Response</h3>
-    <h4 class="title-break">GET /helpresponse</h4>
-    <p>An endpoint for receiving a coach's response to a help request. This message is submitted from within the coach (web) application by subitting a form. For implementation, see <span class="inline-code">routes()</span> in <span class="inline-code">server.js</span> and <span class="inline-code">getCoachResponse()</span> in <span class="inline-code">index.js</span> located in the root directory of the <span class="inline-code">steps-bot</span> code.</p>
-    <span></span> <!-- here just to page the page more readable in IDE -->
-  </div>
+  
   <div class="col l12 controller">
     <h3 class="highlight-title">Other</h3>
     <h4 class="title-break">GET /redirect</h4>
