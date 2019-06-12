@@ -163,9 +163,6 @@
     <h4 class="title-break">GET /api/clients/:id/viewed_media</h4>
     <p>Returns an array of <span class="inline-code">media</span> objects that have been sent to the <span class="inline-code">user</span>. This is used by the bot to make sure we don't send the same media twice.</p>
     <span></span>
-    <h4 class="title-break">GET /api/clients/:id/requests</h4>
-    <p>Returns an array of <span class="inline-code">request</span> objects associated with a single <span class="inline-code">user</span>. A single <span class="inline-code">request</span> object is associated with many <span class="inline-code">messages</span> through a foreign key on <span class="inline-code">message</span> objects.</p>
-    <span></span>
     <h4 class="title-break">POST /api/clients/:id/viewed_media/:media_id</h4>
     <p>Ceates a <span class="inline-code">viewed_media</span> object. These are used to track which <span class="inline-code">user</span> objects a <span class="inline-code">user</span> has already been sent. If it has been sent, it is considered "viewed."</p>
     <span></span>
@@ -321,35 +318,11 @@
     <p>Deletes a <span class="inline-code">media</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
   </div>
 </div>
-<div class="row">
-  <div class="col l12 controller">
-    <h3 class="highlight-title">Request Controller&lt; - DEPRECATED/h3&gt;
-    <span></span>
-    <h4 class="title-break">GET /api/requests</h4>
-    <p>Returns an array of <span class="inline-code">request</span> objects. A <span class="inline-code">request</span> can have many associated <span class="inline-code">messages</span>, each with <span class="inline-code">id</span> of the <span class="inline-code">request</span> as a foreign key value.</p>
-    <span></span>
-    <h4 class="title-break">POST /api/requests</h4>
-    <p>Creates a <span class="inline-code">request</span> record.</p>
-    <span></span>
-    <h4 class="title-break">GET /api/requests/:id</h4>
-    <p>Returns a <span class="inline-code">request</span> object whose <span class="inline-code">id</span> matches the ":id" parameter.</p>
-    <span></span>
-    <h4 class="title-break">PUT /api/requests/:id</h4>
-    <p>Updates a <span class="inline-code">requests</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
-    <span></span>
-    <h4 class="title-break">DELETE /api/requests/:id</h4>
-    <p>Deletes a <span class="inline-code">request</span> whose <span class="inline-code">id</span> mathches the ":id" parameter.</p>
-    <h4 class="title-break">GET /api/coach/requests/:id</h4>
-    <p>Returns a list of open <span class="inline-code">request</span> objects associated with a <span class="inline-code">user</span> of type "Coach" whose <span class="inline-code">id</span> matches the parameter <span class="inline-code">:id</span>.</p>
-    <span></span>
-  &lt;/div&gt;
-&lt;/div&gt;
-
 
 <div class="row">
   <div class="col l12 controller">
     <h2>Data Shapes</h2>
-    <p>For implementation details, refer to <span class="inline-code">src/migration/deploy</span> within the api source code.</p>
+    <p>For implementation details, refer to <span class="inline-code">src/sequelize/migrations</span> within the api source code.</p>
   </div>
 </div>
 
@@ -357,7 +330,6 @@
 <div class="row">
   <div class="col l12 controller">
     <h3 class="highlight-title">org </h3>
-    <p style="color: darkred">NOTE: orgs are currently created manually</p>
     <h4>Schema</h4>
     <div class="schema-div"> 
       <p class="schema-line">
@@ -370,7 +342,43 @@
         <span class="schema-key">sms_number</span>:  <span class="schema-string">text NOT NULL</span>; <span class="schema-comment">// must fit the format "+15555555555"</span>
       </p>
       <p class="schema-line">
-        <span class="schema-key">logo</span>: <span class="schema-string">string</span>;
+        <span class="schema-key">logo</span>: <span class="schema-string">text</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">created_at</span>: <span class="schema-date">timestamptz</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">updated_at</span>: <span class="schema-date">timestamptz</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">phone</span>: <span class="schema-string">text</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">city</span>: <span class="schema-string">text</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">state</span>: <span class="schema-string">text</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">country</span>: <span class="schema-string">text</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">postal_code</span>: <span class="schema-string">text</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">street</span>: <span class="schema-string">text</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">platforms</span>: <span class="schema-string">text</span>; <span class="schema-comment">// [SMS, FBOOK or BOTH]</span>
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">account_sid</span>: <span class="schema-string">text</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">auth_token</span>: <span class="schema-string">text</span>;
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">twilio_number</span>: <span class="schema-string">text</span>;
       </p>
     </div>
     <h4>Example</h4>
@@ -383,8 +391,6 @@
           "logo": "https://url_to_logo.png"
         }
       </code>
-      <code>psql=# INSERT INTO org (name, sms_number) VALUES ('ACME.org', '+15555555555');</code>
-      <code>psql=# INSERT INTO org (name, sms_number, logo) VALUES ('ACME.org', '+15555555555', 'https://s3...');</code>
     </pre>
   </div> 
 </div>
@@ -460,6 +466,18 @@
       </p>
       <p class="schema-line">
         <span class="schema-key">auth0_id</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">sessions</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">active</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">is_first_login</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
+      </p>
+      <p class="schema-line">
+        <span class="schema-key">coach_history</span>: <span class="schema-string">text</span>; <span class="schema-comment">// not used for clients</span>
       </p>
     </div>
     <h4>Example</h4>
@@ -667,9 +685,6 @@
         <span class="schema-key">media_id</span>: <span class="schema-num">integer</span>; <span class="schema-comment">// INDEX</span> 
       </p>
       <p class="schema-line">
-        <span class="schema-key">request_id</span>: <span class="schema-num">integer</span>; <span class="schema-comment">// INDEX</span> 
-      </p>
-      <p class="schema-line">
         <span class="schema-key">timestamp</span>: <span class="schema-date">timestamptz</span>; <span class="schema-comment">// DEFAULT current time, NOT NULL</span>
       </p>
       <p class="schema-line">
@@ -688,7 +703,6 @@
         "to_user": 280,
         "from_user": 41,
         "media_id": null,
-        "request_id": null,
         "timestamp": "2018-07-22T14:55:53.564Z",
         "responses": null,
         "topic": "checkin"
@@ -727,46 +741,6 @@
   </div>
 </div>
 
-<!--- REQUEST -->
-<div class="row">
-  <div class="col l12 controller">
-    <h3 class="highlight-title">request</h3>
-    <h4>Schema</h4>
-    <div class="schema-div"> 
-      <p class="schema-line">
-        <span class="schema-key">id</span>: <span class="schema-num">serial NOT NULL</span>;  <span class="schema-comment">// PRIMARY KEY constraint</span>
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">status</span>: <span class="schema-string">text</span>; <span class="schema-comment">// CHECK 'NEEDS_ASSISTANCE' | 'REPLIED' | 'RESOLVED'</span>
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">user_id</span>: <span class="schema-num">integer  NOT NULL</span>;  <span class="schema-comment">// INDEX</span>
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">task_id</span>: <span class="schema-num">integer  NOT NULL</span>;  <span class="schema-comment">// INDEX</span>
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">created_at</span>: <span class="schema-date">timestamptz</span>;  <span class="schema-comment">// DEFAULT current time</span>
-      </p>
-      <p class="schema-line">
-        <span class="schema-key">updated_at</span>: <span class="schema-date">timestamptz</span>;  
-      </p>
-    </div>
-    <h4>Example</h4>
-    <pre>
-    <code class="language-JSON">
-      {
-        "id": 52,
-        "status": "REPLIED",
-        "user_id": 203,
-        "task_id": 377,
-        "created_at": "2018-06-30T23:39:33.230Z",
-        "updated_at": "2018-07-18T15:49:42.882Z"
-      }
-    </code>
-    </pre>
-  </div>
-</div>
 </h3></div></div></p></div></div>
 
   </div>
